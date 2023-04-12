@@ -4,3 +4,27 @@
 
 "PhysRev":
   url: https://journals.aps.org/
+
+"PRL":
+  url: https://journals.aps.org/prl/
+
+"Nature Com.":
+  url: https://www.nature.com/ncomms/
+
+"arxiv":
+  url: https://arxiv.org
+
+"JAIR":
+  url: https://www.jair.org
+
+"ICML":
+  url: https://icml.cc/
+
+"AISTATS":
+  url: https://aistats.org/
+
+"TUB":
+  url: https://www.tu.berlin/
+
+"UMBJ":
+  url: https://www.umbjournal.org/
