@@ -10,6 +10,8 @@ category: work
 A talk about my PhD project at ANITI Toulouse ([link](https://aniti.univ-toulouse.fr/en/2022/02/18/seminaire-scientifique-avec-stephan-waldchen/))
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IuXVIFtQtyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
