@@ -1,11 +1,15 @@
 ---
 layout: page
 title: Talk 1
-description: a talk with a background image
+description: ANITI seminaire: ANITI Seminaire: Explaining Neural Network Classifiers: Hurdles and Progress
 img: assets/img/12.jpg
 importance: 1
 category: work
 ---
+
+A talk about my PhD project at ANITI Toulouse ([link](https://aniti.univ-toulouse.fr/en/2022/02/18/seminaire-scientifique-avec-stephan-waldchen/))
+
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
