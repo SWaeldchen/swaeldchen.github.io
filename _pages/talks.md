@@ -1,6 +1,6 @@
 ---
 layout: page
-title: talks t
+title: talks
 permalink: /talks/
 description: A growing collection of your cool talks.
 nav: true
