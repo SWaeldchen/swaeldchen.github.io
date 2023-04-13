@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HHI Seminary: Merlin-Arthur Classifiers
+title: HHI Seminary - Merlin-Arthur Classifiers
 description: a talk with a background image
 img: assets/img/12.jpg
 importance: 1

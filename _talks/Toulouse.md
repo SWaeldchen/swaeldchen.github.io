@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Talk 1
-description: ANITI seminaire: ANITI Seminaire: Explaining Neural Network Classifiers: Hurdles and Progress
+title: ANITI Seminaire 4th of March 2022
+description: Explaining Neural Network Classifiers - Hurdles and Progress
 img: assets/img/12.jpg
 importance: 1
 category: work
