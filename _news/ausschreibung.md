@@ -21,3 +21,5 @@ The position is part of the MATH+ project ["Expanding Merlin-Arthur Classifiers 
 6. independent thinker
 
 Write me **(waeldchen@zib.de)** for further information. If you know a candidate that might be a good fit for this position, please forward them this document.
+
+[Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/164358)
