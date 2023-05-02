@@ -8,6 +8,8 @@ related_posts: false
 
 We are seeking a highly motivated and skilled research assistant to join our [Research Team](https://iol.zib.de/research/#LEARN) at IOL Lab at Zuse Institute Berlin. The successful candidate will work closely with our team on cutting-edge research projects in the field of Numerical Optimisation and Explainable AI.
 
+Someone with a maths, theoretical physics or computer science background is preferred, but we are willing to consider anyone who can credibly demonstrate good reasoning and programming skills.
+
 **Apply till 31st of May or until fitting candidate is found**
 
 ***
@@ -23,11 +25,12 @@ For preliminary results see our [paper](https://arxiv.org/pdf/2206.00759.pdf).
 ***
 #### **Requirements:**
 1. completed university degree (Diplom, Master or equivalent) in Mathematics, Computer Science or a closely related course of studies,
-2. solid knowledge of probability theory
-3. good programming skills (Python)
-4. knowledge in computational complexity theory, graph theory and game theory are an advantage
-5. fluent in English
-6. independent thinker
+2. experience in theoretical research (e.g. proving mathematical theorems)
+3. solid knowledge of probability theory
+4. good programming skills (Python)
+5. knowledge in computational complexity theory, graph theory and game theory are an advantage
+6. fluent in English
+7. independent thinker
 
 Write me **(waeldchen@zib.de)** for further information. If you know a candidate that might be a good fit for this position, please forward them this announcement.
 
