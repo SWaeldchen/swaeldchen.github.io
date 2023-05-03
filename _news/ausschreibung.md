@@ -40,4 +40,4 @@ Write me **(waeldchen@zib.de)** for further information. If you know a candidate
 3. Whether you can physically be present at our Berlin office
 4. What your interests are and what motivates you for this position.
 
-<!-- [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/164358) -->
+ [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/164358)
