@@ -25,19 +25,19 @@ For preliminary results see our [paper](https://arxiv.org/pdf/2206.00759.pdf).
 ***
 #### **Requirements:**
 1. completed university degree (Diplom, Master or equivalent) in Mathematics, Computer Science or a closely related course of studies,
-2. experience in theoretical research (e.g. proving mathematical theorems)
-3. solid knowledge of probability theory
-4. good programming skills (Python)
-5. knowledge in computational complexity theory, graph theory and game theory are an advantage
-6. fluent in English
-7. independent thinker
+2. experience in theoretical research (e.g. proving mathematical theorems),
+3. solid knowledge of probability theory,
+4. good programming skills (Python),
+5. knowledge in computational complexity theory, graph theory and game theory are an advantage,
+6. fluent in English,
+7. independent thinker.
 
-Write me **(waeldchen@zib.de)** for further information. If you know a candidate that might be a good fit for this position, please forward them this announcement.
+To apply, write to **(aschulz@math.tu-berlin.de)**. Write me **(waeldchen@zib.de)** for further information. If you know a candidate that might be a good fit for this position, please forward them this announcement.
 
 ### **Please Include:**
-1. How you heard about this position
-2. Link to your website, previous projects or papers
-3. Whether you can physically be present at our Berlin office
-4. What your interests are and what motivates you for this position.
+1. how you fulfill the requirements,
+2. link to your website, previous projects or papers,
+3. whether you can physically be present at our Berlin office,
+4. what your interests are and what motivates you for this position.
 
  [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/164358) (will be updated soon)
