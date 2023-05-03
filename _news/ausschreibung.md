@@ -36,8 +36,9 @@ To apply, write to **(aschulz@math.tu-berlin.de)**. Write me **(waeldchen@zib.de
 
 ### **Please Include:**
 1. how you fulfill the requirements,
-2. link to your website, previous projects or papers,
-3. whether you can physically be present at our Berlin office,
-4. what your interests are and what motivates you for this position.
+2. how you found out about this position
+3. link to your website, previous projects or papers,
+4. whether you can physically be present at our Berlin office,
+5. what your interests are and what motivates you for this position.
 
- [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/164358) (will be updated soon)
+ [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/166084) (will be updated soon)
