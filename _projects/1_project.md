@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Certifiable Game Plans
+description: Can we certify the plan of a powerful but possibly adversarial AI?
+img:
 importance: 1
-category: work
+category: Alignment
 ---
 
 Every project has a beautiful feature showcase page.
