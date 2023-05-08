@@ -10,13 +10,13 @@ category: Hobby
 
 **Goal:**
 
-Write a Musical
+Write a Musical about the dangers of AI. All parts should be written by humans. After all, this might really be the last musical where this is done. **A historic moment!**
 
 **Current Progress:**
 
 1. 3/14 songs are written
 2. Character design is 90% complete
-3. 
+3.
 
 
 Every project has a beautiful feature showcase page.
