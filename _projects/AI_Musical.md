@@ -8,6 +8,17 @@ importance: 3
 category: Hobby
 ---
 
+**Goal:**
+
+Write a Musical
+
+**Current Progress:**
+
+1. 3/14 songs are written
+2. Character design is 90% complete
+3. 
+
+
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
