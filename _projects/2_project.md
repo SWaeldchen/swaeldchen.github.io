@@ -2,7 +2,7 @@
 layout: page
 title: Expanding Merlin-Arthur Classifiers
 description: Can we stabilise the Merlin-Arthur setup for complex dataset/text data?
-img: assets/img/3.jpg
+img:
 importance: 2
 category: Interpretability
 ---
