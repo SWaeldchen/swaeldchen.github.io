@@ -11,7 +11,7 @@ author: Thomas Kerdreux
 
 
 
-*TL;DR: 
+*TL;DR:
 We are presenting an overview of the current approaches and hurdles for formal interpretability:
 1. Shapley Values and Maximum Mutual Information
 1. Computational Complexity of these approaches
@@ -30,7 +30,7 @@ Interpretability research aims to remedy this fact by accompanying a decision, e
 One of the most prominent approaches is feature importance maps, which, for a given input, rate the input features for their imporatance to the model output.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From [Lapuschkin2016])
@@ -44,7 +44,7 @@ This consideration omits in which way the important features were considered. It
 There are many practical approaches that derive feature importance values for neural networks, see []. However, these methods are defined purely heuristically. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be manipulated by clever designs of the neural network.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From [Lapuschkin2016])
@@ -54,13 +54,13 @@ There are many practical approaches that derive feature importance values for ne
 
 We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $\Phi$ that performs well for my purposes, I want another classifier $\Phi^\prime$ that performs equally well but with a completely arbitrary feature importance.
 
-These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see [Lundberg2017]. 
+These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see [Lundberg2017].
 
 All these heuristic explanation methods can be manipulated with the same trick: Basically keep the on-manifold behaviour constant, but change the off-manifold behaviour to influence the interpretations.
 
 Example from [Slack2020]: $\Phi$ is a discriminatory classifier, $\Psi$ is a completely fair classifier and there is a helper function that decides if an input is on-manifold, belongs to a subspace of typical sample $\mathcal{X}$. They define
 
-$$ \Phi^\prime(\mathbf{x}) = 
+$$ \Phi^\prime(\mathbf{x}) =
 \begin{cases}
  \Phi(\mathbf{x}) & \text{if}~ \mathbf{x}\in \mathcal{X}, \\
  \Psi(\mathbf{x}) & \text{otherwise.}
@@ -70,7 +70,7 @@ $$
 Now $\Phi^\prime$ will almost always discriminate since for $\mathbf{x}$ that lie on the manifold, whereas the explanations will be dominated by the fair classifier $\Psi$, since most samples for the explanations are not on manifold. Thus the FAM highlights the innocuous features instead of the discriminatory ones.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/off-manifold.png" alt="img1" style="width:50%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/off-manifold.png" alt="img1" style="width:50%">
 </div>
 **Figure 1.** On-manifold data samples (blue) and off-manifold LIME-samples (red) for the COMPAS dataset; from [Dimanov2020].
 {:.figcap}
@@ -84,7 +84,7 @@ There are two main approaches to feature attribution:
 1. Prime Implicants
 1. Maximal Mutual Information
 
-**Shapley Values** are a value attribution method from cooperative game theory. It is the unique are the unique method that 
+**Shapley Values** are a value attribution method from cooperative game theory. It is the unique are the unique method that
 satisfies the following desirable properties: linearity, symmetry, null player and efficiency (Shapley, 2016). The idea is that a set of players achieve a common value. This value is to be fairly distributed to the players according to their importance. For this one considers every possible subset of players, called a coalition and the value this coalition would achieve.
 Thus, to define Shapley Values one needs a so called *characteristic function*, a value function that is defined on a set as well as all possible subsets.
 For $d$ players, let $\nu: 2^{[d]} \rightarrow \mathbb{R}$. Then $\phi_i$, the Shapley value of the $i$-th player is defined as
@@ -103,7 +103,7 @@ $$
 
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/Shapley.png" alt="img1" style="float:center; margin-right: 1%; width:100%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/Shapley.png" alt="img1" style="float:center; margin-right: 1%; width:100%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** Illustration of the idea of Shapley Values. For three players the pay-off for each possible coalition is shown. [Source](https://clearcode.cc/blog/game-theory-attribution/)
@@ -164,7 +164,7 @@ This has been the approach taken for example in [Fong2017],[MacDonald2019] and [
 
 
 <div style="display: flex; justify-content: center;">
-  <embed src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
+  <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
 **Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from [Macdonald2021].)
@@ -173,7 +173,7 @@ This has been the approach taken for example in [Fong2017],[MacDonald2019] and [
 
 
 <div style="display: flex; justify-content: center;">
-  <embed src="{{site.url }}{{site.baseurl }}/assets/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
+  <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
 **Figure 5.** Illustration of the idea of Shapley Values. For three players the pay-off for each possible coalition is shown. [Source](https://clearcode.cc/blog/game-theory-attribution/)
@@ -193,7 +193,7 @@ $$\mathcal{D}|_{\mathbf{x}_S}$$ in some fitting norm, e.g. the total variation o
 
 Taking any image $\mathbf{x}$ from Imagenet for example and conditioning on a subset $S$ of pixels, there probably exists no second image with the same values on $S$ when the set size is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
 
-In the next post we discuss how this problem can be overcome by replacing the modeling of the 
+In the next post we discuss how this problem can be overcome by replacing the modeling of the
 
 
 
@@ -226,10 +226,3 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 [Ribeiro2016] Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "Model-agnostic interpretability of machine learning." arXiv preprint arXiv:1606.05386 (2016). [pdf](https://arxiv.org/pdf/1606.05386.pdf?source=post_page)
 
 [Macdonald2021] Macdonald, Jan, Mathieu Besançon, and Sebastian Pokutta. "Interpretable neural networks with frank-wolfe: Sparse relevance maps and relevance orderings." arXiv preprint arXiv:2110.08105 (2021). [pdf](https://arxiv.org/pdf/2110.08105)
-
-
-
-
-
-
-
