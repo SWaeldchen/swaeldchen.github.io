@@ -12,12 +12,12 @@ category: Hobby
 
 We write a Musical about the dangers of AI with 5 roles. All parts are written by humans for humans. After all, this might really be the last musical where this is done. **A historic moment!**
 
-When this was conceived, the main motivation was to alert the public about the dangers of runaway AI progress. Since these are now more ubiquitous in the news cycle, the main idea is to present the case for government regulation of AI progress in the form of musical story telling.
+When this was conceived, the main motivation was to alert the public about the dangers of runaway AI progress. Since these are now more ubiquitous in the news cycle, the main idea is to present the case for government regulation of AI progress in the form of musical story telling. Once done, the script will be offered online for free for amateur performers and a small fee for professional performers.
 
 
 **Current Progress:**
 
-- 3/14 songs are written
+- 3/14ish songs are written
 - Character design is 90% complete
 - Overall 2-act plot structure is done
 - Dialogues still need to be written in detail
