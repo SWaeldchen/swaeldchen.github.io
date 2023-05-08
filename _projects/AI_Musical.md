@@ -8,9 +8,12 @@ importance: 3
 category: Hobby
 ---
 
-**Goal:**
+**What is this about?**
 
-Write a Musical about the dangers of AI. All parts should be written by humans. After all, this might really be the last musical where this is done. **A historic moment!**
+We write a Musical about the dangers of AI with 5 roles. All parts are written by humans for humans. After all, this might really be the last musical where this is done. **A historic moment!**
+
+When this was conceived, the main motivation was to alert the public about the dangers of runaway AI progress. Since these are now more ubiquitous in the news cycle, the main idea is to present the case for government regulation of AI progress in the form of musical story telling.
+
 
 **Current Progress:**
 
