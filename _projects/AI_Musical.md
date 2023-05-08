@@ -1,9 +1,9 @@
 ---
 layout: page
 title: The Last Musical (Written by Humans)
-description: Join us for the Sing-Along-ularity
+description: Join us for the Sing-Along-ularity!
 img:
-redirect: https://unsplash.com
+redirect:
 importance: 3
 category: Hobby
 ---
