@@ -98,7 +98,7 @@ $$
 $$
 
 Thus the Shapley values sum over all marginal contributions of the $$i$$-th player for ever possible coalition.
-In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite --file formal_interpretability waldchen2022training %}.
+In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite  waldchen2022training2 --file formal_interpretability %}.
 However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, define $$\nu$$ over expectation values:
 
 $$
@@ -120,7 +120,7 @@ A series of appraoches considers hwo much a subset of the features of $$\mathbf{
 
 This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see {% cite brown2017adversarial --file formal_interpretability %}. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
 
-Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite --file formal_interpretability waldchen2021computational %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} as **precision**:
+Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational2 --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} as **precision**:
 
 $$
  \text{Pr}_{f,\mathbf{x}}(S) = \mathbb{P}_{\mathbf{y} \sim \mathcal{D}}[f(\mathbf{y}) = f(\mathbf{x}) ~|~ \mathbf{x}=\mathbf{y}].
