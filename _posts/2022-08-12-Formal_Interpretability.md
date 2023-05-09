@@ -234,6 +234,6 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 [Macdonald2021] Macdonald, Jan, Mathieu Besançon, and Sebastian Pokutta. "Interpretable neural networks with frank-wolfe: Sparse relevance maps and relevance orderings." arXiv preprint arXiv:2110.08105 (2021). [pdf](https://arxiv.org/pdf/2110.08105)
 
 {% bibliography --cited %}
-{% bibliography file:papers0.bib %}
+{% bibliography --file papers0 %}
 
 {% reference ruby, /_bibliogaphy/papers0.bib %}
