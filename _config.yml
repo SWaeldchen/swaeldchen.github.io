@@ -264,7 +264,7 @@ scholar:
   last_name: [Wäldchen, Waeldchen, Waldchen]
   first_name: [Stephan, S.]
 
-  style: modern-language-association
+  style: apa
   locale: en
 
   source: /_bibliography/
