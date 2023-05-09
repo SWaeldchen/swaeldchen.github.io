@@ -26,7 +26,7 @@ We present an overview of the current approaches and hurdles for formal interpre
 An interpretable AI systems allows the human user to understand its reasoning process. Examples are decision trees, sparse lnear models and $$k$$-nearest neighbors.
 
 The standard bearer of modern machine learning, the **Neural Networks**, while achieving unprecedented accuracy, is nevertheless considered a **black box**, which means its reasoning is not made explicit.
-While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way {% cite signaltrain --file formal_interpretability %}.
+While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way.
 Compare this with how we exactly understand how an AND-gate and a NOT-gate work and how each program of finite length can be expressed as a series of these gates, yet we cannot understand a program just from reading the cuircuit plan.
 
 Interpretability research aims to remedy this fact by accompanying a decision, e.g. such as a classification, with addititional information that describes the reasoning process.
