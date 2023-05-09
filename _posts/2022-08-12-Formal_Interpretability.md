@@ -11,7 +11,7 @@ author: Thomas Kerdreux
 
 
 
-*TL;DR:
+**TL;DR:**
 We are presenting an overview of the current approaches and hurdles for formal interpretability:
 1. Shapley Values and Maximum Mutual Information
 1. Computational Complexity of these approaches
@@ -52,7 +52,7 @@ There are many practical approaches that derive feature importance values for ne
 
 ### Manipulation of Feature Attribution Methods
 
-We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $\Phi$ that performs well for my purposes, I want another classifier $\Phi^\prime$ that performs equally well but with a completely arbitrary feature importance.
+We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $\Phi^\prime$ that performs equally well but with a completely arbitrary feature importance.
 
 These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see [Lundberg2017].
 
