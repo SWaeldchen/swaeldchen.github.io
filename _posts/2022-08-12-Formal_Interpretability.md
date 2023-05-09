@@ -12,19 +12,21 @@ author: Thomas Kerdreux
 
 
 **TL;DR:**
-We are presenting an overview of the current approaches and hurdles for formal interpretability:
-1. Shapley Values and Maximum Mutual Information
-1. Computational Complexity of these approaches
-1. The Modelling Problem and Manipulating Explanations
+We present an overview of the current approaches and hurdles for formal interpretability:
+1. Feature Importance Attribution
+1. Shapley values and maximum mutual information
+1. The modelling problem and manipulating explanations
+1. Computational complexity of these approaches
 <!--more-->
 
 *Written by Stephan Wäldchen.*
 
 ### Interpretable AI
 
-An interpretable AI systems allows the human user to understand its reasoning process. Examles are decision trees, sparse lnear models and $$k$$-nearest neighbors.
+An interpretable AI systems allows the human user to understand its reasoning process. Examples are decision trees, sparse lnear models and $$k$$-nearest neighbors.
 
-The standard bearer of modern machine learning, **Neural Networks**, while achieving unprecedented accuracy are nevertheless considered **black boxes**, which means their reasoning is not made explicit.
+The standard bearer of modern machine learning, the **Neural Networks**, while achieving unprecedented accuracy, is nevertheless considered a **black box**, which means its reasoning is not made explicit.
+While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way.
 Interpretability research aims to remedy this fact by accompanying a decision, e.g. such as a classification, with addititional information that describes the reasoning process.
 
 One of the most prominent approaches is feature importance maps, which, for a given input, rate the input features for their imporatance to the model output.
