@@ -30,7 +30,7 @@ Interpretability research aims to remedy this fact by accompanying a decision, e
 One of the most prominent approaches is feature importance maps, which, for a given input, rate the input features for their imporatance to the model output.
 
 <div style="display: flex; justify-content: center;">
-  <img src="assets/img/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From [Lapuschkin2016])
