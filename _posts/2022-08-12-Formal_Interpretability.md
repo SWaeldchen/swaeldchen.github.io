@@ -238,4 +238,4 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 
 {% bibliography cited %}
 
-{% reference ruby, /_bibliogaphy/papers0.bib %}
+{% reference billy_signaltrain2, /_bibliogaphy/papers0.bib %}
