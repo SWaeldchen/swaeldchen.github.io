@@ -120,10 +120,12 @@ A series of appraoches considers hwo much a subset of the features of $$\mathbf{
 
 This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see {% cite brown2017adversarial --file formal_interpretability %}. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
 
-Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} with the concept of precision:
-\[
- \text{Pr}_{f,\mathbf{x}}(S) - .
-\]
+Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} as precision:
+
+$$
+ \text{Pr}_{f,\mathbf{x}}(S) = \mathbb{P}_{\mathbf{y} \sim \mathcal{D}}[f(\mathbf{y}) = f(\mathbf{x}) ~|~ \mathbf{x}=\mathbf{y}\]- .
+$$
+
 For continuously valued fucntions $$f$$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
 
 $$
