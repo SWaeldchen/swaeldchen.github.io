@@ -26,7 +26,7 @@ We present an overview of the current approaches and hurdles for formal interpre
 An interpretable AI systems allows the human user to understand its reasoning process. Examples are decision trees, sparse lnear models and $$k$$-nearest neighbors.
 
 The standard bearer of modern machine learning, the **Neural Networks**, while achieving unprecedented accuracy, is nevertheless considered a **black box**, which means its reasoning is not made explicit.
-While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way {% cite signaltrain --file papers0 %}.
+While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way {% cite signaltrain --file formal_interpretability %}.
 Compare this with how we exactly understand how an AND-gate and a NOT-gate work and how each program of finite length can be expressed as a series of these gates, yet we cannot understand a program just from reading the cuircuit plan.
 
 Interpretability research aims to remedy this fact by accompanying a decision, e.g. such as a classification, with addititional information that describes the reasoning process.
@@ -45,13 +45,13 @@ One of the most prominent approaches is feature importance maps, which, for a gi
 For a given classifier and an input, **feature importance attribution** (FIA) or feature importance map aims to highlight what part of the input is relevant for the classifier decision on this input. The idea is that generally only a small part of the input is actually important. If for example a neural network decides whether an image contains a cat or a dog, only the part of the image displaying the respectiv animal should be considered important.
 This consideration omits in which way the important features were considered. It can thus be seen as the **lowest level** of the reasoning process.
 
-There are quite a lot of practical approaches that derive feature importance values for neural networks, see {% cite mohseni2021multidisciplinary --file papers0 %}. However, these methods are defined purely **heuristically**. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be **manipulated** by clever designs of the neural network.
+There are quite a lot of practical approaches that derive feature importance values for neural networks, see {% cite mohseni2021multidisciplinary --file formal_interpretability %}. However, these methods are defined purely **heuristically**. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be **manipulated** by clever designs of the neural network.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file papers0 %}
+**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file formal_interpretability %}
 {:.figcap}
 
 ### Manipulation of Heuristic Feature Importance
