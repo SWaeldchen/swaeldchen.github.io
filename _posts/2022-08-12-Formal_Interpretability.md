@@ -37,7 +37,7 @@ One of the most prominent approaches is feature importance maps, which, for a gi
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** An example of a decision list taken from {% cite rudin2019stop %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
 ### Feature Importance Attribution
@@ -45,13 +45,13 @@ One of the most prominent approaches is feature importance maps, which, for a gi
 For a given classifier and an input, **feature importance attribution** (FIA) or feature importance map aims to highlight what part of the input is relevant for the classifier decision on this input. The idea is that generally only a small part of the input is actually important. If for example a neural network decides whether an image contains a cat or a dog, only the part of the image displaying the respectiv animal should be considered important.
 This consideration omits in which way the important features were considered. It can thus be seen as the **lowest level** of the reasoning process.
 
-There are quite a lot of practical approaches that derive feature importance values for neural networks, see []. However, these methods are defined purely **heuristically**. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be **manipulated** by clever designs of the neural network.
+There are quite a lot of practical approaches that derive feature importance values for neural networks, see {% cite mohseni2021multidisciplinary --file papers0 %}. However, these methods are defined purely **heuristically**. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be **manipulated** by clever designs of the neural network.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From [Lapuschkin2016])
+**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file papers0 %}
 {:.figcap}
 
 ### Manipulation of Heuristic Feature Importance
