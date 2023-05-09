@@ -51,18 +51,18 @@ There are quite a lot of practical approaches that derive feature importance val
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file formal_interpretability %}
+**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file formal_interpretability %}.
 {:.figcap}
 
 ### Manipulation of Heuristic Feature Importance
 
 We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $$\Phi^\prime$$ that performs equally well but with a completely arbitrary feature importance.
 
-These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see [Lundberg2017].
+These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see {% cite lundberg2017unified --file formal_interpretability %}.
 
 All these heuristic explanation methods can be manipulated with the same trick: Basically keep the on-manifold behaviour constant, but change the off-manifold behaviour to influence the interpretations.
 
-Example from [Slack2020]: $$\Phi$$ is a discriminatory classifier, $$\Psi$$ is a completely fair classifier and there is a helper function that decides if an input is on-manifold, belongs to a subspace of typical sample $$\mathcal{X}$$. They define
+Example from {% cite slack2020fooling --file formal_interpretability %}: $$\Phi$$ is a discriminatory classifier, $$\Psi$$ is a completely fair classifier and there is a helper function that decides if an input is on-manifold, belongs to a subspace of typical sample $$\mathcal{X}$$. They define
 
 $$ \Phi^\prime(\mathbf{x}) =
 \begin{cases}
@@ -76,7 +76,7 @@ Now $$\Phi^\prime$$ will almost always discriminate since for $$\mathbf{x}$$ tha
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/off-manifold.png" alt="img1" style="width:50%">
 </div>
-**Figure 1.** On-manifold data samples (blue) and off-manifold LIME-samples (red) for the COMPAS dataset; from [Dimanov2020].
+**Figure 1.** On-manifold data samples (blue) and off-manifold LIME-samples (red) for the COMPAS dataset; from {% cite dimanov2020you --file formal_interpretability %}.
 {:.figcap}
 
 Formal approaches to interpretability thus need to make the underlying data distribution explicit.
@@ -89,7 +89,7 @@ There are two main approaches to feature attribution:
 1. Maximal Mutual Information
 
 **Shapley Values** are a value attribution method from cooperative game theory. It is the unique are the unique method that
-satisfies the following desirable properties: linearity, symmetry, null player and efficiency (Shapley, 2016). The idea is that a set of players achieve a common value. This value is to be fairly distributed to the players according to their importance. For this one considers every possible subset of players, called a coalition and the value this coalition would achieve.
+satisfies the following desirable properties: linearity, symmetry, null player and efficiency {% cite shapley1997value --file formal_interpretability %}. The idea is that a set of players achieve a common value. This value is to be fairly distributed to the players according to their importance. For this one considers every possible subset of players, called a coalition and the value this coalition would achieve.
 Thus, to define Shapley Values one needs a so called *characteristic function*, a value function that is defined on a set as well as all possible subsets.
 For $$d$$ players, let $$\nu: 2^{[d]} \rightarrow \mathbb{R}$$. Then $$\phi_i$$, the Shapley value of the $$i$$-th player is defined as
 
@@ -98,8 +98,8 @@ $$
 $$
 
 Thus the Shapley values sum over all marginal contributions of the $$i$$-th player for ever possible coalition.
-In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in [].
-However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, [] define $$\nu$$ over expectation values:
+In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite waldchen2022training --file formal_interpretability %}.
+However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, define $$\nu$$ over expectation values:
 
 $$
     \nu_{f,\mathbf{x}}(S) = \mathbb{E}_{\mathbf{y}\sim \mathcal{D}}[f(\mathbf{y})\,|\, \mathbf{y}_S = \mathbf{x}_S ] = \mathbb{E}_{\mathbf{y}\sim \mathcal{D}|_{\mathbf{x}_S}}[f(\mathbf{y})].
@@ -118,9 +118,13 @@ $$
 
 A series of appraoches considers hwo much a subset of the features of $$\mathbf{x}$$ already determine the function output $$f(\mathbf{x})$$. One of the most straight-forward approaches are the prime implicant explanations [D] for Boolean classifiers. An implicant is a part of the input that determines the output of the function completely, no matter which value the rest of the input takes. A prime implicant is an implicant that cannot be reduced further by omitting features.
 
-This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see []. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
+This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see {% cite brown2017adversarial --file formal_interpretability %}. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
 
-Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$. For continuously valued fucntions $$f$$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
+Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} with the concept of precision:
+\[
+ \text{Pr}_{f,\mathbf{x}}(S) - .
+\]
+For continuously valued fucntions $$f$$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
 
 $$
  S^* = \text{argmin}_{S: |S|\leq k} D_{f,\mathbf{x}}(S) \quad \text{where} \quad D_{f,\mathbf{x}}(S) = \|f(\mathbf{x}) - \mathbb{E}_{\mathbf{y}\sim \mathcal{D}|_{\mathbf{x}_S}}[f(\mathbf{y}) ]\|
@@ -129,7 +133,7 @@ $$
 In the language of Shapley values, we are looking for a small coalition that already achieves a value close to the whole set of players.
 There is a natural trade-off between the maximal set size $$k$$ and the achievable distortion $$D(S^*)$$.
 
-This concept can be refined without the arbitrariness of the norm by taking the mutual information.
+This concept can be refined without the arbitrariness of the norm by considering the mutual information.
 
 **Maximal Mutual Information**
 
@@ -155,7 +159,7 @@ $$
 
 ### The modeling Problem
 
-All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders [] or generative adversarial networks. Let us call these approximations
+All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders or generative adversarial networks. Let us call these approximations
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
 ## Practical Problems
@@ -164,14 +168,14 @@ There are basically two practical approaches to the modelling problem. The first
  \[
  \P_{\bfy\sim\CD}(\bfy_{S^c} ~|~ \bfy_S = \bfx_S) = \prod_{i \in S^c} p(y_i).
  \]
-This has been the approach taken for example in [Fong2017],[MacDonald2019] and [Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
+This has been the approach taken for example in {% cite --file formal_interpretability %}[Fong2017],{% cite --file formal_interpretability %}[MacDonald2019] and {% cite --file formal_interpretability %}[Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
 
 
 <div style="display: flex; justify-content: center;">
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from [Macdonald2021].)
+**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)
 {:.figcap}
 
 
@@ -188,7 +192,6 @@ This has been the approach taken for example in [Fong2017],[MacDonald2019] and [
 $$
 D_{\text{KL}}(\mathcal{D}^\prime, \mathcal{D})
 $$
-
 
 
 Since we want a formal approach with a bound on the calculated Shapley values, distortion or mutual information, we need a distance bound between
