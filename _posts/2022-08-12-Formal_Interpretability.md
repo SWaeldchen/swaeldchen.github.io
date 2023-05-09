@@ -236,4 +236,4 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 {% bibliography --cited %}
 {% bibliography file:references.bib %}
 
-{% reference ruby, /_bibliogaphy/references.bib %}
+{% reference ruby, /_bibliogaphy/papers0.bib %}
