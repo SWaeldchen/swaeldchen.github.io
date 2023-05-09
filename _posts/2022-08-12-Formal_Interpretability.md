@@ -98,7 +98,7 @@ $$
 $$
 
 Thus the Shapley values sum over all marginal contributions of the $$i$$-th player for ever possible coalition.
-In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite  waldchen2022training2  --file formal_interpretability %}.
+In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite  waldchen2022training2 --file formal_interpretability %}.
 However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, define $$\nu$$ over expectation values:
 
 $$
