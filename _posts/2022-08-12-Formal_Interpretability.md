@@ -98,7 +98,7 @@ $$
 $$
 
 Thus the Shapley values sum over all marginal contributions of the $$i$$-th player for ever possible coalition.
-In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite --file formal_interpretability.bib waldchen2022training %}.
+In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in {% cite --file formal_interpretability waldchen2022training %}.
 However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, define $$\nu$$ over expectation values:
 
 $$
@@ -170,7 +170,7 @@ There are basically two practical approaches to the modelling problem. The first
  \[
  \P_{\bfy\sim\CD}(\bfy_{S^c} ~|~ \bfy_S = \bfx_S) = \prod_{i \in S^c} p(y_i).
  \]
-This has been the approach taken for example in {% cite fong2017interpretable --file formal_interpretability %},{% cite --file formal_interpretability.bib macdonald2019rate %} and {% cite ribeiro2016model --file formal_interpretability %}. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
+This has been the approach taken for example in {% cite fong2017interpretable --file formal_interpretability %},{% cite macdonald2019rate --file formal_interpretability.bib %} and {% cite ribeiro2016model --file formal_interpretability %}. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
 
 
 <div style="display: flex; justify-content: center;">
