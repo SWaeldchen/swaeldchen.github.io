@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formal Interpretability: Preliminaries"
+title:  "Formal Interpretability 1: Preliminaries"
 date:   2023-05-09 00:00:00 +0100
 categories: [research]
 tags: [interpretability, feature importance attribution, fia, modelling problem]
@@ -26,8 +26,8 @@ We present an overview of the current approaches and hurdles for formal interpre
 An interpretable AI systems allows the human user to understand its reasoning process. Examples are decision trees, sparse lnear models and $$k$$-nearest neighbors.
 
 The standard bearer of modern machine learning, the **Neural Networks**, while achieving unprecedented accuracy, is nevertheless considered a **black box**, which means its reasoning is not made explicit.
-While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way.
-Compare this with how we exactly understand how an AND-gate and a NOT-gate work and each program of finite length can be expressed as a series of these gates, yet we do not understand each program just from knowing the cuircuit plan.
+While we mathetically understand exactly what is happening in a single neuron, the interplay of thousands of these neurons results in behaviour that cannot be predicted straigtforward way {% cite waldchen2022towards %}.
+Compare this with how we exactly understand how an AND-gate and a NOT-gate work and how each program of finite length can be expressed as a series of these gates, yet we cannot understand a program just from reading the cuircuit plan.
 
 Interpretability research aims to remedy this fact by accompanying a decision, e.g. such as a classification, with addititional information that describes the reasoning process.
 
@@ -42,10 +42,10 @@ One of the most prominent approaches is feature importance maps, which, for a gi
 
 ### Feature Importance Attribution
 
-For a given neural network and an input, *feature attribution* map (FAM) aims to highlight what part of the input is relevant for the neural network decision on this input. The idea is that generally only a small part of the input is important. If the neural network decides whether an image contains a cat or a dog, only the part of the image displaying the respectiv animal should be considered important.
-This consideration omits in which way the important features were considered. It can thus be seen as the lowest level of the reasoning process.
+For a given classifier and an input, **feature importance attribution** (FIA) or feature importance map aims to highlight what part of the input is relevant for the classifier decision on this input. The idea is that generally only a small part of the input is actually important. If for example a neural network decides whether an image contains a cat or a dog, only the part of the image displaying the respectiv animal should be considered important.
+This consideration omits in which way the important features were considered. It can thus be seen as the **lowest level** of the reasoning process.
 
-There are many practical approaches that derive feature importance values for neural networks, see []. However, these methods are defined purely heuristically. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be manipulated by clever designs of the neural network.
+There are quite a lot of practical approaches that derive feature importance values for neural networks, see []. However, these methods are defined purely **heuristically**. They come without any defined target properties for the produced attributions. Furthermore, it has been demonstrated that these methods can be **manipulated** by clever designs of the neural network.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
@@ -54,7 +54,7 @@ There are many practical approaches that derive feature importance values for ne
 **Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From [Lapuschkin2016])
 {:.figcap}
 
-### Manipulation of Feature Attribution Methods
+### Manipulation of Heuristic Feature Importance
 
 We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $$\Phi^\prime$$ that performs equally well but with a completely arbitrary feature importance.
 
@@ -232,3 +232,5 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 [Ribeiro2016] Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "Model-agnostic interpretability of machine learning." arXiv preprint arXiv:1606.05386 (2016). [pdf](https://arxiv.org/pdf/1606.05386.pdf?source=post_page)
 
 [Macdonald2021] Macdonald, Jan, Mathieu Besançon, and Sebastian Pokutta. "Interpretable neural networks with frank-wolfe: Sparse relevance maps and relevance orderings." arXiv preprint arXiv:2110.08105 (2021). [pdf](https://arxiv.org/pdf/2110.08105)
+
+{% bibliography --cited %}
