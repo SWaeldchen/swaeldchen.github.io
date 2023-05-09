@@ -211,6 +211,7 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 
 ### References
 
+<!--
 [Rudin2019] Rudin, Cynthia. "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead." Nature machine intelligence 1.5 (2019): 206-215. [pdf](https://www.nature.com/articles/s42256-019-0048-x)
 
 [Lapuschkin2016] Lapuschkin, Sebastian, et al. "Analyzing classifiers: Fisher vectors and deep neural networks." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016. [pdf](https://openaccess.thecvf.com/content_cvpr_2016/papers/Bach_Analyzing_Classifiers_Fisher_CVPR_2016_paper.pdf)
@@ -232,10 +233,7 @@ In the next post we discuss how this problem can be overcome by replacing the mo
 [Ribeiro2016] Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. "Model-agnostic interpretability of machine learning." arXiv preprint arXiv:1606.05386 (2016). [pdf](https://arxiv.org/pdf/1606.05386.pdf?source=post_page)
 
 [Macdonald2021] Macdonald, Jan, Mathieu Besançon, and Sebastian Pokutta. "Interpretable neural networks with frank-wolfe: Sparse relevance maps and relevance orderings." arXiv preprint arXiv:2110.08105 (2021). [pdf](https://arxiv.org/pdf/2110.08105)
+-->
 
 <!-- {% bibliography --cited %} -->
-{% bibliography --cited --file papers0.bib --template bib2 %}
-
-{% bibliography cited %}
-
-{% reference billy_signaltrain2, /_bibliogaphy/papers0.bib %}
+{% bibliography --cited --file formal_interpretability.bib --template bib2 %}
