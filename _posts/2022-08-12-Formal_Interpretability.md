@@ -120,10 +120,10 @@ A series of appraoches considers hwo much a subset of the features of $$\mathbf{
 
 This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see {% cite brown2017adversarial --file formal_interpretability %}. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
 
-Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} as precision:
+Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$, see {% cite waldchen2021computational --file formal_interpretability %}, and in {% cite ribeiro2018anchors --file formal_interpretability %} as **precision**:
 
 $$
- \text{Pr}_{f,\mathbf{x}}(S) = \mathbb{P}_{\mathbf{y} \sim \mathcal{D}}[f(\mathbf{y}) = f(\mathbf{x}) ~|~ \mathbf{x}=\mathbf{y}\]- .
+ \text{Pr}_{f,\mathbf{x}}(S) = \mathbb{P}_{\mathbf{y} \sim \mathcal{D}}[f(\mathbf{y}) = f(\mathbf{x}) ~|~ \mathbf{x}=\mathbf{y}].
 $$
 
 For continuously valued fucntions $$f$$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
@@ -159,18 +159,18 @@ $$
  S^* = \text{argmax}_{S: |S|\leq k} I_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}); \mathbf{x}_S].
 $$
 
-### The modeling Problem
+## The modeling Problem
 
 All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders or generative adversarial networks. Let us call these approximations
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
-## Practical Problems
+### Practical Problems
 
 There are basically two practical approaches to the modelling problem. The first is taking a simplified distribution that is independent of the given features:
  \[
  \P_{\bfy\sim\CD}(\bfy_{S^c} ~|~ \bfy_S = \bfx_S) = \prod_{i \in S^c} p(y_i).
  \]
-This has been the approach taken for example in {% cite --file formal_interpretability %}[Fong2017],{% cite --file formal_interpretability %}[MacDonald2019] and {% cite --file formal_interpretability %}[Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
+This has been the approach taken for example in {% cite fong2017interpretable --file formal_interpretability %}[Fong2017],{% cite macdonald2019rate --file formal_interpretability %}[MacDonald2019] and {% cite ribeiro2016model --file formal_interpretability %}[Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
 
 
 <div style="display: flex; justify-content: center;">
@@ -189,7 +189,7 @@ This has been the approach taken for example in {% cite --file formal_interpreta
 **Figure 5.** Illustration of the idea of Shapley Values. For three players the pay-off for each possible coalition is shown. [Source](https://clearcode.cc/blog/game-theory-attribution/)
 {:.figcap}
 
-## Theoretical Problems
+### Theoretical Problems
 
 $$
 D_{\text{KL}}(\mathcal{D}^\prime, \mathcal{D})
