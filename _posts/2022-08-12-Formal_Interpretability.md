@@ -169,7 +169,7 @@ $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 There are basically two practical approaches to the modelling problem. The first is taking a simplified distribution that is independent of the given features:
 
  $$
- \mathbb{P}_{\mathbf{y}\sim\CD}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = \prod_{i \in S^c} p(y_i).
+ \mathbb{P}_{\mathbf{y}\sim\mathcal{D}}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = \prod_{i \in S^c} p(y_i).
  $$
 
 This has been the approach taken for example in {% cite fong2017interpretable --file formal_interpretability %},{% cite macdonald2019rate2 --file formal_interpretability.bib %} and {% cite ribeiro2016model --file formal_interpretability %}. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
