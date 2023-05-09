@@ -22,7 +22,7 @@ We are presenting an overview of the current approaches and hurdles for formal i
 
 ### Interpretable AI
 
-An interpretable AI systems allows the human user to understand its reasoning process. Examles are decision trees, sparse lnear models and $k$-nearest neighbors.
+An interpretable AI systems allows the human user to understand its reasoning process. Examles are decision trees, sparse lnear models and $$k$$-nearest neighbors.
 
 The standard bearer of modern machine learning, **Neural Networks**, while achieving unprecedented accuracy are nevertheless considered **black boxes**, which means their reasoning is not made explicit.
 Interpretability research aims to remedy this fact by accompanying a decision, e.g. such as a classification, with addititional information that describes the reasoning process.
@@ -52,13 +52,13 @@ There are many practical approaches that derive feature importance values for ne
 
 ### Manipulation of Feature Attribution Methods
 
-We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $\Phi^\prime$ that performs equally well but with a completely arbitrary feature importance.
+We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $$\Phi^\prime$$ that performs equally well but with a completely arbitrary feature importance.
 
 These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see [Lundberg2017].
 
 All these heuristic explanation methods can be manipulated with the same trick: Basically keep the on-manifold behaviour constant, but change the off-manifold behaviour to influence the interpretations.
 
-Example from [Slack2020]: $\Phi$ is a discriminatory classifier, $\Psi$ is a completely fair classifier and there is a helper function that decides if an input is on-manifold, belongs to a subspace of typical sample $\mathcal{X}$. They define
+Example from [Slack2020]: $$\Phi$$ is a discriminatory classifier, $$\Psi$$ is a completely fair classifier and there is a helper function that decides if an input is on-manifold, belongs to a subspace of typical sample $$\mathcal{X}$$. They define
 
 $$ \Phi^\prime(\mathbf{x}) =
 \begin{cases}
@@ -67,7 +67,7 @@ $$ \Phi^\prime(\mathbf{x}) =
 \end{cases}
 $$
 
-Now $\Phi^\prime$ will almost always discriminate since for $\mathbf{x}$ that lie on the manifold, whereas the explanations will be dominated by the fair classifier $\Psi$, since most samples for the explanations are not on manifold. Thus the FAM highlights the innocuous features instead of the discriminatory ones.
+Now $$\Phi^\prime$$ will almost always discriminate since for $$\mathbf{x}$$ that lie on the manifold, whereas the explanations will be dominated by the fair classifier $$\Psi$$, since most samples for the explanations are not on manifold. Thus the FAM highlights the innocuous features instead of the discriminatory ones.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/off-manifold.png" alt="img1" style="width:50%">
@@ -87,15 +87,15 @@ There are two main approaches to feature attribution:
 **Shapley Values** are a value attribution method from cooperative game theory. It is the unique are the unique method that
 satisfies the following desirable properties: linearity, symmetry, null player and efficiency (Shapley, 2016). The idea is that a set of players achieve a common value. This value is to be fairly distributed to the players according to their importance. For this one considers every possible subset of players, called a coalition and the value this coalition would achieve.
 Thus, to define Shapley Values one needs a so called *characteristic function*, a value function that is defined on a set as well as all possible subsets.
-For $d$ players, let $\nu: 2^{[d]} \rightarrow \mathbb{R}$. Then $\phi_i$, the Shapley value of the $i$-th player is defined as
+For $$d$$ players, let $$\nu: 2^{[d]} \rightarrow \mathbb{R}$$. Then $$\phi_i$$, the Shapley value of the $$i$$-th player is defined as
 
 $$
     \phi_{\nu,i} = \sum_{S \subseteq [d]\setminus\{i\}} \begin{pmatrix} d-1 \\ |S| \end{pmatrix}^{-1} ( \nu(S \cup \{i\}) - \nu(S) ).
 $$
 
-Thus the Shapley values sum over all marginal contributions of the $i$-th player for ever possible coalition.
+Thus the Shapley values sum over all marginal contributions of the $$i$$-th player for ever possible coalition.
 In machine learning, the players correspond to features and the coalitions to subsets of the whole input. The explicite training of a characteristic function has been used in the context of simple two-player games to compare with heuristic attribution methods in [].
-However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $\mathbf{x}$ and classification function $f$, [] define $\nu$ over expectation values:
+However, generally in machine learning, the model cannot evaluate subsets of inputs. For a given input $$\mathbf{x}$$ and classification function $$f$$, [] define $$\nu$$ over expectation values:
 
 $$
     \nu_{f,\mathbf{x}}(S) = \mathbb{E}_{\mathbf{y}\sim \mathcal{D}}[f(\mathbf{y})\,|\, \mathbf{y}_S = \mathbf{x}_S ] = \mathbb{E}_{\mathbf{y}\sim \mathcal{D}|_{\mathbf{x}_S}}[f(\mathbf{y})].
@@ -112,18 +112,18 @@ $$
 
 **Prime Implicants**
 
-A series of appraoches considers hwo much a subset of the features of $\mathbf{x}$ already determine the function output $f(\mathbf{x})$. One of the most straight-forward approaches are the prime implicant explanations [D] for Boolean classifiers. An implicant is a part of the input that determines the output of the function completely, no matter which value the rest of the input takes. A prime implicant is an implicant that cannot be reduced further by omitting features.
+A series of appraoches considers hwo much a subset of the features of $$\mathbf{x}$$ already determine the function output $$f(\mathbf{x})$$. One of the most straight-forward approaches are the prime implicant explanations [D] for Boolean classifiers. An implicant is a part of the input that determines the output of the function completely, no matter which value the rest of the input takes. A prime implicant is an implicant that cannot be reduced further by omitting features.
 
 This concept is tricky to implement for very the highly non-linear neural networks, as small parts of an input can often be manipulated to give a completely different classification, see []. Thus, prime implicant explanations need to cover almost the whole input, and are thus not very informative.
 
-Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $\delta$. For continuously valued fucntions $f$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
+Probabilistic prime implicants have thus be introduced. As a relaxed notion, they only require the implicant to determine the function output with some high probability $$\delta$$. For continuously valued fucntions $$f$$ this can be further relaxed to being close to the original value in some fitting norm. One is then often interested in the most informative subset of a given maximal size:
 
 $$
  S^* = \text{argmin}_{S: |S|\leq k} D_{f,\mathbf{x}}(S) \quad \text{where} \quad D_{f,\mathbf{x}}(S) = \|f(\mathbf{x}) - \mathbb{E}_{\mathbf{y}\sim \mathcal{D}|_{\mathbf{x}_S}}[f(\mathbf{y}) ]\|
 $$
 
 In the language of Shapley values, we are looking for a small coalition that already achieves a value close to the whole set of players.
-There is a natural trade-off between the maximal set size $k$ and the achievable distortion $D(S^*)$.
+There is a natural trade-off between the maximal set size $$k$$ and the achievable distortion $$D(S^*)$$.
 
 This concept can be refined without the arbitrariness of the norm by taking the mutual information.
 
@@ -135,14 +135,14 @@ $$
  I_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}); \mathbf{x}_S] = H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x})] - H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}) ~|~ \mathbf{x}_S],
 $$
 
-where $H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x})]$ is the a priori entropy of the classification decision and $H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}) ~|~ \mathbf{x}_S]$ is the conditional entropy given the input set.
+where $$H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x})]$$ is the a priori entropy of the classification decision and $$H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}) ~|~ \mathbf{x}_S]$$ is the conditional entropy given the input set.
 When the conditional entropy is close to zero, the mutual information takes its maximal value as the pure a priori entropy.
 
 $$
  H_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}) ~|~ \mathbf{x}_S] = - \sum_{l} p_l \log(p_l) \quad \text{where} \quad p_l = \mathbb{P}_{\mathbf{y} \sim \mathcal{D}}[f(\mathbf{y}) = l ~|~ \mathbf{y}_S = \mathbf{x}_S],
 $$
 
-where $l$ runs over the domain of $f$.
+where $$l$$ runs over the domain of $$f$$.
 Similarly to the prime implicant explanations, one is often interested to find a small subset of the input that ensures high mutual information with the output:
 
 $$
@@ -151,7 +151,7 @@ $$
 
 ### The modeling Problem
 
-All three presented methods to calculate the conditional probabilities $ \mathcal{D}_{\mathbf{x}_S}$ for all subsets $S$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders [] or generative adversarial networks. Let us call these approximations
+All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders [] or generative adversarial networks. Let us call these approximations
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
 ## Practical Problems
@@ -160,7 +160,7 @@ There are basically two practical approaches to the modelling problem. The first
  \[
  \P_{\bfy\sim\CD}(\bfy_{S^c} ~|~ \bfy_S = \bfx_S) = \prod_{i \in S^c} p(y_i).
  \]
-This has been the approach taken for example in [Fong2017],[MacDonald2019] and [Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $D_{f,\mathbf{x}}$, as shown in Figure 4.
+This has been the approach taken for example in [Fong2017],[MacDonald2019] and [Ribeiro2016]. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
 
 
 <div style="display: flex; justify-content: center;">
@@ -191,7 +191,7 @@ Since we want a formal approach with a bound on the calculated Shapley values, d
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$ and
 $$\mathcal{D}|_{\mathbf{x}_S}$$ in some fitting norm, e.g. the total variation or Kullback-Leibler divergence. This is hard to achieve, since to establish such bounds one would need many samples of the dataset conditions on each of the exponentially many subsets.
 
-Taking any image $\mathbf{x}$ from Imagenet for example and conditioning on a subset $S$ of pixels, there probably exists no second image with the same values on $S$ when the set size is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
+Taking any image $$\mathbf{x}$$ from Imagenet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when the set size is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
 
 In the next post we discuss how this problem can be overcome by replacing the modeling of the
 
