@@ -14,9 +14,8 @@ author: Stephan Wäldchen
 **TL;DR:**
 We present an overview of the current approaches and hurdles for formal interpretability:
 1. Feature Importance Attribution
-1. Shapley values and maximum mutual information
-1. The modelling problem and manipulating explanations
-1. Computational complexity of these approaches
+1. Shapley Values, Prime Implicants and Maximum Mutual Information
+1. The Modelling Problem and Manipulating Explanations
 <!--more-->
 
 <!--- *Written by Stephan Wäldchen.* -->
@@ -57,14 +56,14 @@ There are quite a lot of practical approaches that derive feature importance val
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/lrp_example.png" alt="img1" style="float:center; margin-right: 5%; width:80%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** Feature attribution map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file formal_interpretability %}.
+**Figure 1.** Feature importance map generated with LRP for a Fisher Vector Classifier (FV) and a Deep Neural Network (DNN). One can see that the FV decides the boat class based mostly on the water. Will this classifier generalise to boats without water? From {% cite lapuschkin2016analyzing --file formal_interpretability %}.
 {:.figcap}
 
 ### Manipulation of Heuristic Feature Importance
 
 We are talking about manipulations in the follwing sense: Given that I have a neural network classifier $$\Phi$$ that performs well for my purposes, I want another classifier $$\Phi^\prime$$ that performs equally well but with a completely arbitrary feature importance.
 
-These heuristic FAMs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see {% cite lundberg2017unified --file formal_interpretability %}.
+These heuristic FIAs all make implicit assumptions on the data distribution (some of them do that in a layer-wise fashion), see {% cite lundberg2017unified --file formal_interpretability %}.
 
 All these heuristic explanation methods can be manipulated with the same trick: Basically keep the on-manifold behaviour constant, but change the off-manifold behaviour to influence the interpretations.
 
@@ -77,7 +76,7 @@ $$ \Phi^\prime(\mathbf{x}) =
 \end{cases}
 $$
 
-Now $$\Phi^\prime$$ will almost always discriminate since for $$\mathbf{x}$$ that lie on the manifold, whereas the explanations will be dominated by the fair classifier $$\Psi$$, since most samples for the explanations are not on manifold. Thus the FAM highlights the innocuous features instead of the discriminatory ones.
+Now $$\Phi^\prime$$ will almost always discriminate since for $$\mathbf{x}$$ that lie on the manifold, whereas the explanations will be dominated by the fair classifier $$\Psi$$, since most samples for the explanations are not on manifold. Thus the FIA highlights the innocuous features instead of the discriminatory ones.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/off-manifold.png" alt="img1" style="width:50%">
@@ -166,9 +165,9 @@ $$
  S^* = \text{argmax}_{S: |S|\leq k} I_{\mathbf{x} \sim \mathcal{D}}[f(\mathbf{x}); \mathbf{x}_S].
 $$
 
-## The modeling Problem
+## The modelling Problem
 
-All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders or generative adversarial networks. Let us call these approximations
+All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modelling of the conditional data distribution. This has been achieved practically with variational autoencoders or generative adversarial networks. Let us call these approximations
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
 #### Practical Problems
@@ -189,6 +188,9 @@ This has been the approach taken for example in {% cite fong2017interpretable --
 **Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monochrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021]. This can happen because of the effect explained in Figure 5 Left.
 {:.figcap}
 
+In fact, these simplified models are the reason that the heuristic methods of LIME ans ShAP are manipulable as explained before. If they used a correct model of the data distribution, there would be no off-manifold inputs when calculating the importance valuese, and the trick to change the off-manifold behaviour of the classifier would be without effect.
+
+
 The **second**, data-driven approach is to train a **generative model** on the dataset:
 
 $$
@@ -201,7 +203,7 @@ This has the advantage that the inpainting will likely be done more correctly th
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 5.** Different failure modes for different models of the data distribution.
+**Figure 5.** Different failure modes for different models of the data distribution. Both approaches have specific shortcomings. *Left:* Feature inpainting with an i.i.d. distribution. Selecting a mask can create a new feature that was not present in the original input. If one would consider a data-driven approach instead the rest of the image would likely be inpainted as black and the effect would disappear. *Right:* Data-driven inpainting. After selecting the boat feature, a trained generator inpaints the water back into the image, which the classifier uses for classification. Consequently the boat feature will get high Shaply Values/mutual information even though the classifier does not rely on boats. If one uses an i.i.d appraoch this effect would not appear.
 {:.figcap}
 
 #### Theoretical Problems
@@ -219,13 +221,7 @@ This is hard to achieve, since to establish such bounds one would need many samp
 
 Taking any image $$\mathbf{x}$$ from Imagenet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
 
-In the next post we discuss how this problem can be overcome by replacing the modeling of the data distribution with an adversarial setup.
-
-### Computational Complexity
-
-The problem of finding
-
-
+In the next post we discuss how this problem can be overcome by replacing the modelling of the data distribution with an adversarial setup.
 
 
 ### References
