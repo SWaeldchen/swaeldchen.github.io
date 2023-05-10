@@ -27,12 +27,12 @@ We present interactive classification as an approach to define informative featu
 <!--more-->
 
 
-In <a href="/blog/2023/FI_Preliminaries/">a previous post</a> we discussed the difficulties that arise if one aims to model the data distribution to determine important features following according to high Mutual Information or Shapley Values.
-Now, we explain how this issue can be circumvented by designing an inherently interpretable classifier thorugh an interactive classification setup.
+In <a href="/blog/2023/FI_Preliminaries/">a previous post</a> we discussed why it is difficult to model the conditional data distribution. This distribution is used to define feature importance according to high Mutual Information or Shapley Values.
+Now, we explain how this issue can be circumvented by designing an inherently interpretable classifier through an interactive classification setup. This setup will allow us to derive lower bounds on the **precision** of the features in terms of quantities that can be easily estimated on a dataset.
 
 ### Interactive Classification
 
-The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the Merlin-Arthur protocol. The prover selects a feature from the datapoint and sends it to the verifier, Arthur, who decides the class. Crucially, in IPS the prover is unreliable, sometimes trying to convince the verifier of a wrong judgement. We mirror this by having a second prover, Morgana, that tries to get Arthur to say the wrong class. Arthur is allowed to say "Don't know!" and thus refraining from classification.
+The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the [Merlin-Arthur protocol](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol#MA). The **prover** selects a feature from the datapoint and sends it to the verifier, Arthur, who decides the class. Crucially, in IPS the prover is unreliable, sometimes trying to convince the verifier of a wrong judgement. We mirror this by having a second prover, Morgana, that tries to get Arthur to say the wrong class. Arthur is allowed to say "Don't know!" and thus refraining from classification.
 In this context, we can then translate the concepts of *completeness* and *soundness* from IPS to our setting. Completeness describes the probability that Arthur classifies correctly based on features from Merlin. Soundness is the probability that Arthur does not get fooled by Morgana, thus either giving the correct class or answering ''Don't know!''.
 These two quantities can be measured on a test dataset and are used to lower bound the information contained in features selected by Merlin.
 
