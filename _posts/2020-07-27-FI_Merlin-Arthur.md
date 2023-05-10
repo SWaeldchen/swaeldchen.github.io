@@ -1,21 +1,24 @@
 ---
 layout: post
-title:  "Formal Interpretability: Merlin-Arthur Classification"
+title:  "Formal Interpretability 2: Interactive Classification"
 date:   2020-07-27 00:00:00 +0100
 categories: [research]
 tags: [optimization, ml, uniform convexity, abstract]
 math: true
 comments: true
-author: Thomas Kerdreux
+giscus_comments: true
+author: Stephan Wäldchen
 ---
-*TL;DR:
-We present interactive classification as an approach to find informative features without modelling the data distribution explicitly
-1. Interactive Classification with Prover and Verifier: why the prover needs to be unreliable
-1. Asymmetric feature correlation as a problem for this setup
-1. How we get around the requirement of optimal players
-<!--more-->
 
-*Written by Stephan Wäldchen*
+This post is part of my series on <a href="blog/2023/blog/2023/FI_start/">Formal Interpretability</a>
+
+*TL;DR:
+We present interactive classification as an approach to define informative features without modelling the data distribution explicitly
+
+1. Interactive Classification with Prover and Verifier: why the prover needs to be unreliable
+1. Asymmetric Feature Correlation
+1. Do we need a game equilibrium?
+<!--more-->
 
 
 In [last post] we discussed the difficulties that arise if one aims to model the data distribution to determine important features following according to high Mutual Information or Shapley Values. Now, we explain how this issue can be circumvented by desgining an inherently interpretable classifier thorugh an interactive classification setup.
