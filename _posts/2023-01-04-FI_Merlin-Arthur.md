@@ -21,7 +21,8 @@ We present interactive classification as an approach to define informative featu
 <!--more-->
 
 
-In [last post] we discussed the difficulties that arise if one aims to model the data distribution to determine important features following according to high Mutual Information or Shapley Values. Now, we explain how this issue can be circumvented by desgining an inherently interpretable classifier thorugh an interactive classification setup.
+In <a href="/blog/2023/FI_Preliminaries/">a previous post</a> we discussed the difficulties that arise if one aims to model the data distribution to determine important features following according to high Mutual Information or Shapley Values.
+Now, we explain how this issue can be circumvented by designing an inherently interpretable classifier thorugh an interactive classification setup.
 
 ### Interactive Classification
 
