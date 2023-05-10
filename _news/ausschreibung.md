@@ -10,7 +10,7 @@ We are seeking a highly motivated and skilled research assistant to join our [Re
 
 Someone with a maths, theoretical physics or computer science background is preferred, but we are willing to consider anyone who can credibly demonstrate good reasoning and programming skills.
 
-**Apply till 14th of May or until fitting candidate is found**
+**Apply till 17th of May or until fitting candidate is found**
 
 ***
 The position is part of the MATH+ project ["Expanding Merlin-Arthur Classifiers - Interpretable Neural Networks through Interactive Proof Systems"](https://mathplus.de/research-2/emerging-fields/ef1-extracting-dynamical-laws-from-complex-data/ef1-24/). This research project is part of the Emerging Fields Area "Extracting dynamical Laws from Complex Data". Our work focuses on the mathematical analysis of interpretability in AI systems. We want to investigate under which conditions interacting agents have to communicate honestly about their reasoning process. Our aim is to develop a theoretically sound foundation to make modern AI systems safe for deployment in sensitive ares. MATH+, the Berlin Mathematics Research Center, is a cross-institutional and interdisciplinary Cluster of Excellence. It sets out to explore and further develop new approaches in application-oriented mathematics. For more information see: <https://mathplus.de>.
@@ -41,4 +41,4 @@ To apply, write to **(aschulz@math.tu-berlin.de)**. Write me **(waeldchen@zib.de
 4. whether you can physically be present at our Berlin office,
 5. what your interests are and what motivates you for this position.
 
- [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/166084) (will be updated soon)
+ [Official TUB Announcement (German)](https://www.jobs.tu-berlin.de/stellenausschreibungen/166084)

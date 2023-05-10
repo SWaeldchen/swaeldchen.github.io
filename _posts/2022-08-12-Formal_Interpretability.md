@@ -210,7 +210,7 @@ This has the advantage that the inpainting will likely be done more correctly th
 #### Theoretical Problems
 
 
-Since we want a formal approach with a bound on the calculated Shapley values, distortion or mutual information, we need a distance bound between
+Since we want a formal approach with a bound on the calculated Shapley values, distortion or mutual information, we need a **distance bound** between
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$ and
 $$\mathcal{D}|_{\mathbf{x}_S}$$ in some fitting norm, e.g. the total variation or Kullback-Leibler divergence
 
@@ -218,9 +218,9 @@ $$
 D_{\text{KL}}(\mathcal{D}|_{\mathbf{x}_S}, \mathcal{D^\prime}|_{\mathbf{x}_S}).
 $$
 
-This is hard to achieve, since to establish such bounds one would need many samples of the dataset conditioned on each of the exponentially many subsets.
+This is hard to achieve, since to establish such bounds one would need **exponentially many samples** from the dataset, since there are exponentially many subsets to condition on.
 
-Taking any image $$\mathbf{x}$$ from ImageNet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled for most high-dimensional datasets and no quality bounds can be derived. One would need to trust one trained model to evaluate another trained model --- this is a very strong condition for a formal guarantee!
+Taking any image $$\mathbf{x}$$ from ImageNet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled for most high-dimensional datasets and no quality bounds can be derived. **One would need to trust one trained model to evaluate another trained model** --- this is a very strong condition for a formal guarantee!
 
 In the next post we discuss how this problem can be overcome by replacing the modelling of the data distribution with an adversarial setup.
 
