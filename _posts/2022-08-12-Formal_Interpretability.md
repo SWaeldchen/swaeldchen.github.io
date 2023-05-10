@@ -172,7 +172,7 @@ $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
 ### Practical Problems
 
-There are basically two practical approaches to the modelling problem. The first is taking a simplified distribution that is independent of the given features:
+There are basically two practical approaches to the modelling problem. The **first** is taking a simplified **i.i.d. distribution** (which is in particular independent of the given features):
 
  $$
  \mathbb{P}_{\mathbf{y}\sim\mathcal{D}}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = \prod_{i \in S^c} p(y_i).
@@ -188,7 +188,7 @@ This has been the approach taken for example in {% cite fong2017interpretable --
 **Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)
 {:.figcap}
 
-The second, data-driven approach is to train a generative model on the dataset:
+The **second**, data-driven approach is to train a **generative model** on the dataset:
 
 $$
  \mathbb{P}_{\mathbf{y}\sim\mathcal{D}}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = G(\mathbf{y}_{S^c}~;~ \mathbf{x}_{S})
