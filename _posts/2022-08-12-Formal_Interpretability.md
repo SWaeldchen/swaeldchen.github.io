@@ -194,8 +194,7 @@ $$
  \mathbb{P}_{\mathbf{y}\sim\mathcal{D}}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = G(\mathbf{y}_{S^c}~;~ \mathbf{x}_{S}).
 $$
 
-This has the advantage that the inpainting will likely be done more correctly thus evading the creation of new features by the mask. However, a new problem arises. Since it is likely that the classifier and the generator have been trained on the same dataset, they tend to learn the same biases which can cancel out and go undetected. An illustration is given in Figure 5 Right.
-
+This has the advantage that the inpainting will likely be done more correctly thus evading the creation of new features by the mask. However, a new problem arises. Since it is likely that the classifier and the generator have been trained on the same dataset, they tend to learn the same biases which can cancel out and go undetected. An illustration is given in Figure 5 Right. The classifier learns to use water to identify ships. When a pixel mask containing the ship is selected, the generator paints the water back in, which can then be used by the classifier to answer correctly thus giving the appearance that the ship feature was used. This would give the ship high Shapley values and high mutual information, despite the classifier working in a way that will not generalise outside the dataset.
 
 <div style="display: flex; justify-content: center;">
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
