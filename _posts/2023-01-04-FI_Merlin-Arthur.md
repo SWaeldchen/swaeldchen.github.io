@@ -38,7 +38,7 @@ These two quantities can be measured on a test dataset and are used to lower bou
 
 Interactive classification had been introduced earlier in [Lei2016] and [Bastings2019] -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
 
-<object type="image/svg+xml" data="/assets/img/merlin_arthur/cheating.svg" width="50%" height="50%"></object>
+<object type="image/svg+xml" data="/assets/img/merlin_arthur/cheating.svg" width="50%" height="50%" style="display: flex; justify-content: center;"></object>
 **Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
