@@ -175,11 +175,17 @@ There are basically two practical approaches to the modelling problem. The first
 This has been the approach taken for example in {% cite fong2017interpretable --file formal_interpretability %},{% cite macdonald2019rate2 --file formal_interpretability.bib %} and {% cite ribeiro2016model --file formal_interpretability %}. The problem here is that for certain masks this can create features that are not there in the original image, see Figure 4 for an illustration. This can actually happen even when unintended in case of an optimiser solving for small distortion $$D_{f,\mathbf{x}}$$, as shown in Figure 4.
 
 
+<style>
+  .figcap {
+    font-size: 0.8em;
+  }
+</style>
+
 <div style="display: flex; justify-content: center;">
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 4.** <font size=”1”>The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)<\font>
+**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)
 {:.figcap}
 
 The second, data-driven approach is to train a generative model on the dataset:
