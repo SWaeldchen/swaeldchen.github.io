@@ -177,7 +177,7 @@ This has been the approach taken for example in {% cite fong2017interpretable --
 
 <style>
   .figcap {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 </style>
 
