@@ -43,7 +43,7 @@ One of the most prominent approaches is feature importance maps, which, for a gi
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/decision_list.png" alt="img1" style="float:center; margin-right: 5%; width:95%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** An example of a decision list taken from {% cite rudin2019stop %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
 ### Feature Importance Attribution
