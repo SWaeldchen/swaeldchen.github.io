@@ -220,7 +220,7 @@ $$
 
 This is hard to achieve, since to establish such bounds one would need many samples of the dataset conditioned on each of the exponentially many subsets.
 
-Taking any image $$\mathbf{x}$$ from ImageNet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled for most high-dimensional datasets and no quality bounds can be derived.
+Taking any image $$\mathbf{x}$$ from ImageNet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled for most high-dimensional datasets and no quality bounds can be derived. One would need to trust one trained model to evaluate another trained model --- this is a very strong condition for a formal guarantee!
 
 In the next post we discuss how this problem can be overcome by replacing the modelling of the data distribution with an adversarial setup.
 
