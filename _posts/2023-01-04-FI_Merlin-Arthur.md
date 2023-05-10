@@ -10,17 +10,17 @@ giscus_comments: true
 author: Stephan Wäldchen
 ---
 
-$$\newcommand{\bfx}{\mathbf{x}}$$
-$$\newcommand{\bfy}{\mathbf{y}}$$
-$$\newcommand{\bfz}{\mathbf{z}}$$
-$$\newcommand{\ap}{\text{Pr}}$$
-$$\newcommand{\CD}{\mathcal{D}}$$
-$$\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$$
-$$\newcommand{\E}{\mathbb{E}}$$
-$$\renewcommand{\P}{\mathbb{P}}$$
-$$\newcommand{\morg}{\widehat{M}}$$
-$$\newcommand{\CA}{\mathcal{A}}$$
-$$\newcommand{\CM}{\mathcal{M}}$$
+$\newcommand{\bfx}{\mathbf{x}}$
+$\newcommand{\bfy}{\mathbf{y}}$
+$\newcommand{\bfz}{\mathbf{z}}$
+$\newcommand{\ap}{\text{Pr}}$
+$\newcommand{\CD}{\mathcal{D}}$
+$\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$
+$\newcommand{\E}{\mathbb{E}}$
+$\renewcommand{\P}{\mathbb{P}}$
+$\newcommand{\morg}{\widehat{M}}$
+$\newcommand{\CA}{\mathcal{A}}$
+$\newcommand{\CM}{\mathcal{M}}$
 
 <style>
   .figcap {
@@ -28,7 +28,7 @@ $$\newcommand{\CM}{\mathcal{M}}$$
   }
 </style>
 
-This post is part $\phi$ 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
 
 *TL;DR:
 We present interactive classification as an approach to define informative features without modelling the data distribution explicitly
