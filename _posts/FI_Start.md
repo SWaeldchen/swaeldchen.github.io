@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Formal Interpretability 0: Overview"
-date:   2023-05-09 00:00:00 +0100
+date:   2023-05-08 00:00:00 +0100
 categories: [research]
 tags: [interpretability, feature importance attribution, fia]
 math: true
