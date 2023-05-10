@@ -28,7 +28,7 @@ $$\newcommand{\CM}{\mathcal{M}}$$
   }
 </style>
 
-This post is part 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part $\phi$ 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
 
 *TL;DR:
 We present interactive classification as an approach to define informative features without modelling the data distribution explicitly
