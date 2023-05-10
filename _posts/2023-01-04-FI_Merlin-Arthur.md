@@ -40,7 +40,7 @@ Interactive classification had been introduced earlier in [Lei2016] and [Basting
 
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.svg" alt="img1" style="float:center; margin-right: 5%; width:95%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.svg" alt="img1" style="float:center; margin-right: 5%; width:50%">
   <p style="clear: both;"></p>
 </div>
 
