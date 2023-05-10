@@ -200,10 +200,10 @@ This has the advantage that the inpainting will likely be done more correctly th
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 5.** Illustration of the idea of Shapley Values. For three players the pay-off for each possible coalition is shown. [Source](https://clearcode.cc/blog/game-theory-attribution/)
+**Figure 5.** )
 {:.figcap}
 
-### Theoretical Problems
+#### Theoretical Problems
 
 
 Since we want a formal approach with a bound on the calculated Shapley values, distortion or mutual information, we need a distance bound between
