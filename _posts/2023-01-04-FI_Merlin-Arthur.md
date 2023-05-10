@@ -43,13 +43,9 @@ Interactive classification had been introduced earlier in [Lei2016] and [Basting
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.svg" alt="img1" style="float:center; width:50%">
   <p style="clear: both;"></p>
 </div>
-
-<object type="image/svg+xml" data="/assets/img/merlin_arthur/cheating.svg" width="50%" height="50%" style="display: flex; justify-content: center;"></object>
 **Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
-<embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.pdf" width="500" height="375"
- type="application/pdf">
 
 
 ### Asymmetric Feature Correlation
