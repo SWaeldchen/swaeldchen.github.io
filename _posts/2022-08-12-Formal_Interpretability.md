@@ -185,7 +185,7 @@ This has been the approach taken for example in {% cite fong2017interpretable --
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)
+**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monochrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021]. This can happen because of the effect explained in Figure 5 Left.)
 {:.figcap}
 
 The **second**, data-driven approach is to train a **generative model** on the dataset:
