@@ -89,10 +89,11 @@ Formal approaches to interpretability thus need to make the underlying data dist
 
 ### Formal definition of feature importance
 
-There are two main approaches to feature attribution:
+There are three main approaches to feature importance attribution:
 1. Shapley values
 1. Prime Implicants
 1. Maximal Mutual Information
+While Shapley values directly give a score to each feature, prime implicants and maximum mutual information select a subset of the features as **the important features**. However, since most search methods for these subsets work over convex relaxations of set membership, the unthresholded scores can serve as an importance value.
 
 **Shapley Values** are a value attribution method from cooperative game theory. It is the unique are the unique method that
 satisfies the following desirable properties: linearity, symmetry, null player and efficiency {% cite shapley1997value --file formal_interpretability %}. The idea is that a set of players achieve a common value. This value is to be fairly distributed to the players according to their importance. For this one considers every possible subset of players, called a coalition and the value this coalition would achieve.
@@ -170,7 +171,7 @@ $$
 All three presented methods to calculate the conditional probabilities $$ \mathcal{D}_{\mathbf{x}_S}$$ for all subsets $$S$$ in question. For synthetic datasets these probabilities can be known, for realistic datasets however, these probabilities require explicit modeling of the conditional data distribution. This has been achieved practically with variational autoencoders or generative adversarial networks. Let us call these approximations
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$.
 
-### Practical Problems
+#### Practical Problems
 
 There are basically two practical approaches to the modelling problem. The **first** is taking a simplified **i.i.d. distribution** (which is in particular independent of the given features):
 
@@ -185,7 +186,7 @@ This has been the approach taken for example in {% cite fong2017interpretable --
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monochrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021]. This can happen because of the effect explained in Figure 5 Left.)
+**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monochrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021]. This can happen because of the effect explained in Figure 5 Left.
 {:.figcap}
 
 The **second**, data-driven approach is to train a **generative model** on the dataset:
@@ -200,7 +201,7 @@ This has the advantage that the inpainting will likely be done more correctly th
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 5.** )
+**Figure 5.** Different failure modes for different models of the data distribution.
 {:.figcap}
 
 #### Theoretical Problems
