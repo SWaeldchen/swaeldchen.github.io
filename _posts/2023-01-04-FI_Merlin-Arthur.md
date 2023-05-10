@@ -32,8 +32,9 @@ These two quantities can be measured on a test dataset and are used to lower bou
 
 Interactive classification had been introduced earlier in [Lei2016] and [Bastings2019] -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
 
+<object type="image/svg+xml" data="/assets/img/merlin_arthur/cheating.svg" width="100%" height="100%"></object>
 
-<embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.pdf" width="500" height="375" 
+<embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.pdf" width="500" height="375"
  type="application/pdf">
 
 
