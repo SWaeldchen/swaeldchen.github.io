@@ -10,6 +10,18 @@ giscus_comments: true
 author: Stephan Wäldchen
 ---
 
+$\newcommand{\bfx}{\mathbf{x}}$
+$\newcommand{\bfy}{\mathbf{y}}$
+$\newcommand{\bfz}{\mathbf{z}}$
+$\newcommand{\ap}{\text{Pr}}$
+$\newcommand{\CD}{\mathcal{D}}$
+$\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$
+$\newcommand{\E}{\mathbb{E}}$
+$\renewcommand{\P}{\mathbb{P}}$
+$\newcommand{\morg}{\widehat{M}}$
+$\newcommand{\CA}{\mathcal{A}}$  
+$\newcommand{\CM}{\mathcal{M}}$
+
 <style>
   .figcap {
     font-size: 0.9em;
