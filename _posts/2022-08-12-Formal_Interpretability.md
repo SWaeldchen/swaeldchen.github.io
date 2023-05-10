@@ -179,10 +179,14 @@ This has been the approach taken for example in {% cite fong2017interpretable --
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/bird_mask.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 4.** The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)
+**Figure 4.** <font size=”1”>The optimised mask to convince the classifier of the (correct) bird class constructs a feature that is not present in the original image, here a bird head looking to the left inside of the monocrome black wing of the original; from {% cite --file formal_interpretability %}[Macdonald2021].)<\font>
 {:.figcap}
 
+The second, data-driven approach is to train a generative model on the dataset:
 
+$$
+ \mathbb{P}_{\mathbf{y}\sim\mathcal{D}}(\mathbf{y}_{S^c} ~|~ \mathbf{y}_S = \mathbf{x}_S) = G(\mathbf{y}_{S^c}~;~ \mathbf{x}_{S})
+$$
 
 <div style="display: flex; justify-content: center;">
   <embed src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/failures.png" alt="img1" style="float:center; margin-right: 1%; width:50%">
@@ -193,25 +197,24 @@ This has been the approach taken for example in {% cite fong2017interpretable --
 
 ### Theoretical Problems
 
-$$
-D_{\text{KL}}(\mathcal{D}^\prime, \mathcal{D})
-$$
-
 
 Since we want a formal approach with a bound on the calculated Shapley values, distortion or mutual information, we need a distance bound between
 $$\mathcal{D^\prime}|_{\mathbf{x}_S}$$ and
-$$\mathcal{D}|_{\mathbf{x}_S}$$ in some fitting norm, e.g. the total variation or Kullback-Leibler divergence. This is hard to achieve, since to establish such bounds one would need many samples of the dataset conditions on each of the exponentially many subsets.
+$$\mathcal{D}|_{\mathbf{x}_S}$$ in some fitting norm, e.g. the total variation or Kullback-Leibler divergence
 
-Taking any image $$\mathbf{x}$$ from Imagenet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when the set size is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
+$$
+D_{\text{KL}}(\mathcal{D}|_{\mathbf{x}_S}, \mathcal{D^\prime}|_{\mathbf{x}_S}).
+$$
 
-In the next post we discuss how this problem can be overcome by replacing the modeling of the
+This is hard to achieve, since to establish such bounds one would need many samples of the dataset conditioned on each of the exponentially many subsets.
 
+Taking any image $$\mathbf{x}$$ from Imagenet for example and conditioning on a subset $$S$$ of pixels, there probably exists no second image with the same values on $$S$$ when size of $$S$$ is larger than 20. These conditional distributions thus cannot be sampled in most high-dimensional datasets and no quality bounds can be derived.
 
-
+In the next post we discuss how this problem can be overcome by replacing the modeling of the data distribution with an adversarial setup.
 
 ### Computational Complexity
 
-
+The problem of finding
 
 
 
