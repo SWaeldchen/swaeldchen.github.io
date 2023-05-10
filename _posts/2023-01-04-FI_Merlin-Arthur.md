@@ -32,7 +32,7 @@ Now, we explain how this issue can be circumvented by designing an inherently in
 
 ### Interactive Classification
 
-The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the [Merlin-Arthur protocol](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol#MA). The **prover** selects a feature from the datapoint and sends it to the verifier, Arthur, who decides the class.
+The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the [Merlin-Arthur protocol](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol#MA). The **prover** (Merlin) selects a feature from the datapoint and sends it to the **verifier** (Arthur) who decides the class.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/concept.svg" alt="img1" style="float:center; width:50%">
