@@ -10,7 +10,7 @@ giscus_comments: true
 author: Stephan Wäldchen
 ---
 
-
+This post is part 1 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
 
 **TL;DR:**
 We present an overview of the current approaches and hurdles for formal interpretability:
