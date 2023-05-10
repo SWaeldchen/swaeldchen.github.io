@@ -44,7 +44,7 @@ Now, we explain how this issue can be circumvented by designing an inherently in
 
 ### Interactive Classification
 
-The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the [Merlin-Arthur protocol](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol#MA). The **prover** (Merlin) selects a feature from the datapoint and sends it to the **verifier** (Arthur) who decides the class.
+The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory, specifically the [Merlin-Arthur protocol](https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol#MA). The prover (**Merlin**) selects a feature from the datapoint and sends it to the verifier (**Arthur**) who decides the class.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/concept.svg" alt="img1" style="float:center; width:50%">
@@ -54,8 +54,12 @@ The inspiration for interactive classification comes from Interactive Proof Syst
 {:.figcap}
 
 
-Crucially, in IPS the prover is unreliable, sometimes trying to convince the verifier of a wrong judgement. We mirror this by having a second prover, Morgana, that tries to get Arthur to say the wrong class. Arthur is allowed to say "Don't know!" and thus refraining from classification.
-In this context, we can then translate the concepts of *completeness* and *soundness* from IPS to our setting. Completeness describes the probability that Arthur classifies correctly based on features from Merlin. Soundness is the probability that Arthur does not get fooled by Morgana, thus either giving the correct class or answering ''Don't know!''.
+Crucially, in IPS the prover is unreliable, sometimes trying to convince the verifier of a wrong judgement. We mirror this by having a second prover, **Morgana**, that tries to get Arthur to say the wrong class. Arthur is allowed to say "Don't know!" and thus refraining from classification.
+In this context, we can then translate the concepts of **completeness** and **soundness** from IPS to our setting.
+
+- Completeness: describes the probability that Arthur classifies correctly based on features from Merlin.
+- Soundness is the probability that Arthur does not get fooled by Morgana, thus either giving the correct class or answering ''Don't know!''.
+
 These two quantities can be measured on a test dataset and are used to lower bound the information contained in features selected by Merlin.
 
 Interactive classification had been introduced earlier in [Lei2016] and [Bastings2019] -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
