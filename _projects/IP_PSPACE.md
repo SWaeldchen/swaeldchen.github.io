@@ -32,4 +32,24 @@ At least for the first two problems I can see a way towards a solution. So from 
 Two-player games (or multiplayer), even with probabilistic aspects, are $\mathsf{PSPACE}$-complete. As far as we can tell, $\mathsf{PSPACE}$-complete problems are not in $\mathsf{NP}$ and will now allow for a polynomially sized certificate.
 However, we can extend the discussion with the AI up to polynomially many rounds, which results in the complexity class $\mathsf{IP}$ or *Interactive Proofs*. Coincidentally, $mathsf{IP} is exactly equal to $\mathsf{PSPACE}$.
 
-This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves 
+This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step [Polynomial Identity Testing](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
+
+One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf).
+
+This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the polynomial consistency condition becomes very similar to a relaxed version of the [Bellman- equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add furhter details to illustrate that point later.
+
+I want to actually implement this for an AI trained with Reinforcement Learning and Gradient Descent.
+
+1. Use a simple deterministic game with finite time horizon (e.g. tic-tac-toe, Connect-Four, Hex)
+1. Train an AI to not only predict the whether the player can still win given a board situation. Extend this AI to predict the polynomial coefficients for the polynomial identity test, given the previous random samples.
+1. See how well the AI can be trained to actually fulfil the consistency checks.
+
+Questions:
+1. Can a neural network architecture learn to predict the right polynomial coefficients? Since the coefficients are from a finite field, there is some room to correct errors.
+1. Can the whole methods be made robust for a system that makes mistakes sometimes? Could this involve relaxing the consistency condition?
+1. Can this be scaled up to more compled games?
+1. How can we incorporate randomness?
+
+Reasons why I believe this will work:
+1. Neural networks have become quite good at grokking abstract reasoning tasks,
+1. As the reasoning capabilities of AI grows, this challenge will actually become easier.
