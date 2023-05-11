@@ -36,7 +36,7 @@ This equality is usually demonstrated by reducing TQBL (Totally Quantified Boole
 
 One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf).
 
-This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the polynomial consistency condition becomes very similar to a relaxed version of the [Bellman- equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add furhter details to illustrate that point later.
+This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the polynomial consistency condition becomes very similar to a arithmetised version of the [Bellman- equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
 
 I want to actually implement this for an AI trained with Reinforcement Learning and Gradient Descent.
 
