@@ -49,7 +49,7 @@ I want to actually implement this for an AI trained with Reinforcement Learning 
 1. Can a neural network architecture learn to predict the right polynomial coefficients? Since the coefficients are from a finite field, there is some room to correct errors.
 1. Can the whole methods be made robust for a system that makes mistakes sometimes? Could this involve relaxing the consistency condition?
 1. Can this be scaled up to more compled games?
-1. How can we incorporate randomness?
+1. How can we extend this to non-deterministic games?
 
 **Reasons** why I believe this might work:
 1. Neural networks have become quite good at grokking abstract reasoning tasks,
