@@ -32,11 +32,11 @@ At least for the first two problems I can see a way towards a solution. So from 
 Two-player games (or multiplayer), even with probabilistic aspects, are $\mathsf{PSPACE}$-complete. As far as we can tell, $\mathsf{PSPACE}$-complete problems are not in $\mathsf{NP}$ and will now allow for a polynomially sized certificate.
 However, we can extend the discussion with the AI up to polynomially many rounds, which results in the complexity class $\mathsf{IP}$ or *Interactive Proofs*. Coincidentally, $\mathsf{IP}$ is exactly equal to $\mathsf{PSPACE}$.
 
-This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step [Polynomial Identity Testing](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
+This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step [Polynomial Identity Testing (PIT)](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
 
 One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf).
 
-This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the polynomial consistency condition becomes very similar to a arithmetised version of the [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
+This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the PIT consistency condition becomes very similar to a arithmetised version of the [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
 
 I want to actually implement this for an AI trained with Reinforcement Learning and Gradient Descent.
 
@@ -53,4 +53,4 @@ I want to actually implement this for an AI trained with Reinforcement Learning 
 
 **Reasons** why I believe this might work:
 1. Neural networks have become quite good at grokking abstract reasoning tasks,
-1. As the reasoning capabilities of AI grows, this challenge will actually become easier.
+1. As the reasoning capabilities of AI grows, certifying the game plan will become easier, even if the AI comes up with more complicated plans, since it becomes easier to implement the PIT.
