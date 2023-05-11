@@ -51,6 +51,6 @@ I want to actually implement this for an AI trained with Reinforcement Learning 
 1. Can this be scaled up to more compled games?
 1. How can we extend this to non-deterministic games?
 
-**Reasons** why I believe this might work:
+**Reasons why I believe this might work:**
 1. Neural networks have become quite good at grokking abstract reasoning tasks,
 1. As the reasoning capabilities of AI grows, certifying the game plan will become easier, even if the AI comes up with more complicated plans, since it becomes easier to implement the PIT.
