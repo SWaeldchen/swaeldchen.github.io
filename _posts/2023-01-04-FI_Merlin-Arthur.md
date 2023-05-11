@@ -60,9 +60,9 @@ In this context, we can then translate the concepts of *completeness* and *sound
 - **Completeness:** describes the probability that Arthur classifies correctly based on features from Merlin.
 - **Soundness:** is the probability that Arthur does not get fooled by Morgana, thus either giving the correct class or answering ''Don't know!''.
 
-These two quantities can be measured on a test dataset and are used to lower bound the information contained in features selected by Merlin.
+These two quantities can be measured on a finite dataset and are used to lower bound the information contained in features selected by Merlin. Since these are simple scalar quantities, one can easily estimate them on the test set similar to the test accuracy of a normal classifier.
 
-Interactive classification had been introduced earlier in [Lei2016] and [Bastings2019] -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
+History: Interactive classification had been introduced earlier in lei2016rationalizing and bastings2019interpretable -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
 
 
 <div style="display: flex; justify-content: center;">
@@ -197,29 +197,3 @@ difficult.
 
 
 ### References
-
-[D] Dunn, Joseph C. Rates of convergence for conditional gradient algorithms near singular and nonsingular extremals. SIAM Journal on Control and Optimization 17.2 (1979): 187-211. [pdf](https://epubs.siam.org/doi/pdf/10.1137/0324071?casa_token=mV4qkf9aLskAAAAA:--jyeKNCSwAH5fejuzgJr1im_OXPyesfgPOU1fk-cfmBYZjTdrRSAHHfZEWjQRUaYSI0vNPB7NwY)
-
-[DR] Demyanov, V. F. ; Rubinov, A. M. Approximate methods in optimization problems. Modern Analytic and Computational Methods in Science and Mathematics, 1970.
-
-[DDS] Donahue, M. J.; Darken, C.; Gurvits, L.; Sontag, E. (1997). Rates of convex approximation in non-Hilbert spaces. *Constructive Approximation*, *13*(2), 187-220.
-
-[GH] Garber, D.; Hazan, E. Faster rates for the frank-wolfe method over strongly-convex sets. In 32nd International Conference on Machine Learning, ICML 2015. [pdf](https://arxiv.org/abs/1406.1305)
-
-[GI] Goncharov, V. V.; Ivanov, G. E. Strong and weak convexity of closed sets in a hilbert space. In Operations research engineering, and cyber security, pages 259–297. Springer, 2017.
-
-[GM] Guélat, J.; Marcotte, P. (1986). Some comments on Wolfe's ‘away step’. Mathematical Programming, 35(1), 110-119.
-
-[HL] Huang, R.; Lattimore, T.; György, A.; Szepesvári, C. Following the leader and fast rates in linear prediction: Curved constraint sets and other regularities. In Advances in Neural Information Processing Systems, pages 4970–4978, 2016. [pdf](https://arxiv.org/abs/1702.03040)
-
-[J] Jaggi, M. Revisiting Frank-Wolfe: Projection-free sparse convex optimization. In Proceedings of the 30th international conference on machine learning, ICML 2013. p. 427-435. [pdf](http://www.jmlr.org/proceedings/papers/v28/jaggi13.pdf)
-
-[JN] Juditsky, A.; Nemirovski, A.S. Large deviations of vector-valued martingales in 2-smooth normed spaces. [pdf](https://arxiv.org/abs/0809.0813)
-
-[KDP] Kerdreux, T.; d’Aspremont, A.; Pokutta, S. 2019. Restarting Frank-Wolfe. In The 22nd International Conference on Artificial Intelligence and Statistics (pp. 1275-1283). [pdf](https://arxiv.org/abs/1810.02429)
-
-[LJ] Lacoste-Julien, S. ;  Jaggi, Martin. On the global linear convergence of Frank-Wolfe optimization variants. In : Advances in neural information processing systems. 2015. p. 496-504. [pdf](https://infoscience.epfl.ch/record/229239/files/nips15_paper_sup_camera_ready.pdf)
-
-[P] Polyak, B. T. Existence theorems and convergence of minimizing sequences for extremal problems with constraints. In Doklady Akademii Nauk, volume 166, pages 287–290. Russian Academy of Sciences, 1966.
-
-[ST] Sridharan, K.; Tewari, A. (2010, June). Convex Games in Banach Spaces. In *COLT* (pp. 1-13). [pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.304.5992&rep=rep1&type=pdf)

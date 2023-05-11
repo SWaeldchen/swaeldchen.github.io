@@ -7,6 +7,18 @@ importance: 1
 category: Alignment
 ---
 
+
+
+This is my idea for a new AI alignment project. Basically, I want to answer the followign question:
+
+<blockquote style="text-align:center; font-style:italic; color:#333;">
+  "Can a more powerful reasoner convince a human auditor of the validity of a plan, even in a complex environment?"
+</blockquote>
+
+
+
+
+
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
