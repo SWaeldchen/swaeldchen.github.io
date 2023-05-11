@@ -30,7 +30,7 @@ For most real-world plans there are complications however:
 At least for the first two problems I can see a way towards a solution. So from now on, we assume that we are have perfect knowledge of how the environment works and only care about the result of the plan up to some finite time $T$.
 
 Two-player games (or multiplayer), even with probabilistic aspects, are $\mathsf{PSPACE}$-complete. As far as we can tell, $\mathsf{PSPACE}$-complete problems are not in $\mathsf{NP}$ and will now allow for a polynomially sized certificate.
-However, we can extend the discussion with the AI up to polynomially many rounds, which results in the complexity class $\mathsf{IP}$ or *Interactive Proofs*. Coincidentally, $mathsf{IP} is exactly equal to $\mathsf{PSPACE}$.
+However, we can extend the discussion with the AI up to polynomially many rounds, which results in the complexity class $\mathsf{IP}$ or *Interactive Proofs*. Coincidentally, $\mathsf{IP}$ is exactly equal to $\mathsf{PSPACE}$.
 
 This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step [Polynomial Identity Testing](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
 
