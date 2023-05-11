@@ -20,7 +20,7 @@ The position is part of the MATH+ project ["Expanding Merlin-Arthur Classifiers 
 
 We want to build a theory that guarantees Interpretability (e.g. in the form of information bounds) for modern AI systems. Can we play AI agents against each other, so they are forced to cooperate with humans? Is it possible that AI systems prove the soundness of their reasoning to us? Can we give interpretations in text form? How robust are these approaches? Do the explanations degenerate when the AIs are incentivised to obscure their reasoning? Can we use a form of error-correction to prevent this?
 
-For preliminary results see our [paper](https://arxiv.org/pdf/2206.00759.pdf).
+For preliminary results see our [paper](https://arxiv.org/pdf/2206.00759.pdf). See <a href="projects/IP_PSPACE">here</a> for one possible angle for this project.
 
 ***
 #### **Requirements:**
