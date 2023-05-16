@@ -10,14 +10,11 @@ category: Hobby
 
 **What is this about?**
 
-We write a Musical about the dangers of AI with 5 roles. All parts are written by humans for humans. After all, this might really be the last musical where this is done. **A historic moment!**
+We write a Musical about the dangers and moral questions of transformative AI. All parts are written by humans for humans. After all, this might really be the last musical where this is done. **A historic moment!**
 
-When this was conceived, the main motivation was to alert the public about the dangers of runaway AI progress. Since these are now more ubiquitous in the news cycle, the main idea is to present the case for government regulation of AI progress in the form of musical story telling. Once done, the script will be offered online for free for amateur performers and a small fee for professional performers.
+When this was conceived, the main motivation was to alert the public about the dangers of runaway AI progress. Since these are now more ubiquitous in the news cycle, the main idea is to present the case for government regulation of AI in the form of musical story telling. Once done, the script will be offered online for free for amateur performers and a small fee for professional performers.
 
-
-**The Concept**
-
-We want to tell a story about the morel questions and dangers of transformative AI. Five characters, one little Bay Area startup:
+ Five characters, one little Bay Area startup:
 
 **Markus:** Online shitposter and machine learning prodigy, creator of the first (he believes) conscious artificial intelligence.<br>
 **Cassy:** Vegan utilitarian socialist, moderately famous blogger and member of Impactful Generosity. She worries about the danger posed by AI.<br>
