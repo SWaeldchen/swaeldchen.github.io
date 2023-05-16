@@ -37,7 +37,7 @@ Here is one snap shot from our creative process:
 - Dialogues still need to be written in detail
 - Instrumentalisation to be settled (probably piano, guitar, base, drums, violin, one brass instrument)
 
-**I want to contribute:**
+**Want to contribute?**
 
 We are still looking for help if:
 - You play an instrument and can write accompanyment when given the melody and harmonies?
