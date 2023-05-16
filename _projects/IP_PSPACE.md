@@ -28,14 +28,22 @@ For most real-world plans there are complications however:
 
 At least for the first two problems I can see a way towards a solution. So from now on, we assume that we are have perfect knowledge of how the environment works and only care about the result of the plan up to some finite time $T$.
 
-Two-player games (or multiplayer), even with probabilistic aspects, are $\mathsf{PSPACE}$-complete. As far as we can tell, $\mathsf{PSPACE}$-complete problems are not in $\mathsf{NP}$ and will now allow for a polynomially sized certificate.
+Two-player games (or multiplayer), even with probabilistic aspects, are $\mathsf{PSPACE}$-complete. As far as we can tell, $\mathsf{PSPACE}$-complete problems are not in $\mathsf{NP}$ and will not allow for a polynomially sized certificate.
 However, we can extend the discussion with the AI up to polynomially many rounds, which results in the complexity class $\mathsf{IP}$ or *Interactive Proofs*. Coincidentally, $\mathsf{IP}$ is exactly equal to $\mathsf{PSPACE}$.
 
-This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas) to PSPACE, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step aithmetisation of the Boolean logic and [Polynomial Identity Testing (PIT)](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
+This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas, a $\mathsf{PSPACE}$-complete problem) to $\mathsf{IP}$, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step aithmetisation of the Boolean logic and [Polynomial Identity Testing (PIT)](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
 
-One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf).
+One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf). The Boolean formula describes the game mechanic, i.e. what is the initial board situation, what kinds of moves are allowed and what is the win condition, in terms of binary variables.
 
 This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the PIT consistency condition becomes very similar to a arithmetised version of the [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
+In principle we replace
+
+\[
+ Q(a_t, s_t) = r(a_t, s_t) + \max_{a_{t+1}} Q(a_{t+1}, x_{t+1}) \quad\rightarrow\quad Q(a_t, s_t) = \bigvee_{a_{t+1}} Q(a_{t+1}, x_{t+1}),
+\]
+where $a \lor b = a + b - ab$, the arithmatisation of the logical OR.
+These return the same value, if there are no intermediate rewards and Q always predicts a binary reward for either winning or losing. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
+
 
 I want to actually train an neural network-based agent to have arithmetic consistency via Reinforcement Learning and Gradient Descent.
 
