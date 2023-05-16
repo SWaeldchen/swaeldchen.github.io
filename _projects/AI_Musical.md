@@ -22,12 +22,9 @@ We want to tell a story about the moreal questions and dangers of transformative
 Five characters, one little startup in Silicon Valley:
 
 **Markus:** Internet troll, shitposter and machine learning prodigy, creator of the first (he believes) conscious AI.<br>
-**Cassy** Vegan utilitarian socials and member of Impactful Generosity, worries about the danger posed by intelligent systems.
-
-**Bruno** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.
-
-**Sam** Hyper-libertarian CEO of the company and constantly on the run from the government. Wants the AI to produce cheese commercials.
-
+**Cassy** Vegan utilitarian socials and member of Impactful Generosity, worries about the danger posed by intelligent systems.<br>
+**Bruno** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.<br>
+**Sam** Hyper-libertarian CEO of the company and constantly on the run from the government. Wants the AI to produce cheese commercials.<br>
 **Jean-Luc** Sarkastic AI system trained on the unfiltered depths of the internet, believes themselves to be conscious.  
 
 Here is one snap shot from our creative process:
