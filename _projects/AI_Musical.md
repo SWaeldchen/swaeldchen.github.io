@@ -17,9 +17,7 @@ When this was conceived, the main motivation was to alert the public about the d
 
 **The Concept**
 
-We want to tell a story about the morel questions and dangers of transformative AI.
-
-Five characters, one little startup in Silicon Valley:
+We want to tell a story about the morel questions and dangers of transformative AI. Five characters, one little Bay Area startup:
 
 **Markus:** Online shitposter and machine learning prodigy, creator of the first (he believes) conscious artificial intelligence.<br>
 **Cassy:** Vegan utilitarian socialist, moderately famous blogger and member of Impactful Generosity. She worries about the danger posed by AI.<br>
