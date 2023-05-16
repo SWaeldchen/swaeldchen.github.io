@@ -20,7 +20,7 @@ When this was conceived, the main motivation was to alert the public about the d
 **Cassy:** Vegan utilitarian socialist, moderately famous blogger and member of Impactful Generosity. She worries about the danger posed by AI.<br>
 **Bruno:** Formerly homeless meditation guru in training, now HR recruiter and best friend of Markus. Just wants to chill.<br>
 **Samantha:** Hyper-libertarian CEO of the company and always on the run from the government. Wants the AI to produce cheese commercials.<br>
-**Jean-Luc:** Sarkastic AI system trained on the unfiltered depths of the internet. Wants humans to accept them as a conscious being.
+**Jean-Luc:** Foul-mouthed AI system trained on the unfiltered depths of the internet. Wants humans to accept them as a conscious being.
 
 Here is one snap shot from our creative process:
 
