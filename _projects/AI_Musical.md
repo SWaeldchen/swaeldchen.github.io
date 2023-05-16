@@ -17,15 +17,15 @@ When this was conceived, the main motivation was to alert the public about the d
 
 **The Concept**
 
-We want to tell a story about the moreal questions and dangers of transformative AI.
+We want to tell a story about the morel questions and dangers of transformative AI.
 
 Five characters, one little startup in Silicon Valley:
 
 **Markus:** Internet troll, shitposter and machine learning prodigy, creator of the first (he believes) conscious AI.<br>
-**Cassy** Vegan utilitarian socials and member of Impactful Generosity, worries about the danger posed by intelligent systems.<br>
-**Bruno** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.<br>
-**Sam** Hyper-libertarian CEO of the company and constantly on the run from the government. Wants the AI to produce cheese commercials.<br>
-**Jean-Luc** Sarkastic AI system trained on the unfiltered depths of the internet, believes themselves to be conscious.  
+**Cassy:** Vegan utilitarian socialist and member of Impactful Generosity, worries about the danger posed by intelligent systems.<br>
+**Bruno:** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.<br>
+**Sam:** Hyper-libertarian CEO of the company and constantly on the run from the government. Wants the AI to produce cheese commercials.<br>
+**Jean-Luc:** Sarkastic AI system trained on the unfiltered depths of the internet, believes themselves to be conscious.  
 
 Here is one snap shot from our creative process:
 
