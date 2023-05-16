@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Last Musical (Written by Humans)
-description: Join us for the Sing-Along-ularity!
+description: *Join us for the Sing-Along-ularity!*
 img:
 redirect:
 importance: 3
