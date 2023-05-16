@@ -38,9 +38,10 @@ One can easily transform deterministic two-player games into TQBFs, for non-dete
 This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the PIT consistency condition becomes very similar to a arithmetised version of the [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
 In principle we replace
 
-\[
+$$
  Q(a_t, s_t) = r(a_t, s_t) + \max_{a_{t+1}} Q(a_{t+1}, x_{t+1}) \quad\rightarrow\quad Q(a_t, s_t) = \bigvee_{a_{t+1}} Q(a_{t+1}, x_{t+1}),
-\]
+$$
+
 where $a \lor b = a + b - ab$, the arithmatisation of the logical OR.
 These return the same value, if there are no intermediate rewards and Q always predicts a binary reward for either winning or losing. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
 
