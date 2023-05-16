@@ -29,8 +29,7 @@ Five characters, one little startup in Silicon Valley:
 
 Here is one snap shot from our creative process:
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ArvxxTczKRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ArvxxTczKRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Current Progress:**
 
