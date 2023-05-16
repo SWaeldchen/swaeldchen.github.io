@@ -25,7 +25,7 @@ Five characters, one little startup in Silicon Valley:
 **Cassy:** Vegan utilitarian socialist, moderatly famous blogger and member of Impactful Generosity. She worries about the danger posed by AI.<br>
 **Bruno:** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.<br>
 **Sam:** Hyper-libertarian CEO of the company and constantly on the run from the government. Wants the AI to produce cheese commercials.<br>
-**Jean-Luc:** Sarkastic AI system trained on the unfiltered depths of the internet, believes themselves to be conscious.  
+**Jean-Luc:** Sarkastic AI system trained on the unfiltered depths of the internet. Want's humans to accept them as a conscious being.
 
 Here is one snap shot from our creative process:
 
