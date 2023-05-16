@@ -42,8 +42,14 @@ $$
  Q(a_t, s_t) = r(a_t, s_t) + \max_{a_{t+1}} Q(a_{t+1}, x_{t+1}) \quad\rightarrow\quad Q(a_t, s_t) = \bigvee_{a_{t+1}} Q(a_{t+1}, x_{t+1}),
 $$
 
-where $a \lor b = a + b - ab$, the arithmatisation of the logical OR.
-These return the same value, if there are no intermediate rewards and Q always predicts a binary reward for either winning or losing. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
+where $x \lor y = x + y - xy$, the arithmatisation of the logical OR.
+These return the same value, if there is only a binary reward for winning
+
+$$
+r(a_t, s_t) = \begin{cases} 0 & t<T, \\ \text{is_win}(s_t) & t = T \end{cases},
+$$
+
+and Q always predicts a binary reward. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
 
 
 I want to actually train an neural network-based agent to have arithmetic consistency via Reinforcement Learning and Gradient Descent.
