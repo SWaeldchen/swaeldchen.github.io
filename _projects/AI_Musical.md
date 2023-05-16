@@ -21,8 +21,7 @@ We want to tell a story about the moreal questions and dangers of transformative
 
 Five characters, one little startup in Silicon Valley:
 
-**Markus:** Internet troll, shitposter and machine learning prodigy, creator of the first (he believes) conscious AI.
-
+**Markus:** Internet troll, shitposter and machine learning prodigy, creator of the first (he believes) conscious AI.<br>
 **Cassy** Vegan utilitarian socials and member of Impactful Generosity, worries about the danger posed by intelligent systems.
 
 **Bruno** Formerly homeless, constantly meditating wanna-be guru, now HR recruiter and best friend of Markus.
