@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Certifiable Game Plans
+title: Arithmetic Reinforcement Learning and Certifiable Game Plans
 description: Can we certify the plan of a powerful but possibly adversarial AI?
 img:
 importance: 1
 category: Alignment
 ---
-
 
 
 This is my idea for a new AI alignment project. Basically, I want to answer the followign question:
