@@ -22,9 +22,9 @@ When this was conceived, the main motivation was to alert the public about the d
 **Samantha:** Hyper-libertarian CEO of the company and always on the run from the government. Wants the AI to produce cheese commercials.<br>
 **Jean-Luc:** Foul-mouthed AI system trained on the unfiltered depths of the internet. Wants humans to accept them as a conscious being.
 
-Here is one snap shot from our creative process:
+Here is one snap shot from our creative process (turn on subtitles):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ArvxxTczKRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ArvxxTczKRo?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Current Progress:**
 
