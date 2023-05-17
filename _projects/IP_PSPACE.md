@@ -53,14 +53,20 @@ and Q always predicts a binary reward. Any game with intermediate reward can be 
 
 I want to actually train an neural network-based agent to have arithmetic consistency via Reinforcement Learning and Gradient Descent.
 
-The straightforward way for implementation would be to let the neural network represent a polynomial oracle. The input would be an  assignment from the finite field to all but one variable, and the output would be the polynomial coefficients of the left over variable.
-However, this seems complicated to train, as the network would need to learn polynomial multiplication. One can make this easer by having quadratic activations functions additionally to the ReLU ones.
-
 
 **Implementation:**
 1. Use a simple deterministic game with finite time horizon (e.g. tic-tac-toe, Connect-Four, Hex)
 1. Train an AI to predict the whether the player can still win given a board situation. Extend this AI to predict the polynomial coefficients for the polynomial identity test, given the previous random samples of the $\mathsf{IP}$-protocol as input.
 1. See how well the AI can be trained to actually fulfil the consistency checks.
+
+**How to do the arithmetic extension?**
+I basically have three ideas how to do the arithmetic extension. None of them are super satisfactory yet.
+
+1. The straightforward way for implementation would be to let a ReLU-neural network represent a polynomial oracle. The input would be an  assignment from the finite field to all but one variable, and the output would be the polynomial coefficients of the left over variable.
+However, this seems complicated to train, as the network would need to learn polynomial multiplication. One can make this easer by having quadratic activations functions additionally to the ReLU ones.
+1. Another way is to train a Neural Network with only quadratic activations which then represents a polynomial of degree exponential in the number of layers. However, one can do non-commutative identity testing, which appearently can [deal with exponential degrees and exponential number of terms](https://arxiv.org/pdf/1606.00596.pdf). I haven't fully understood the paper though. *Edit:* I forgot that the number of terms can actually grow **doubly**-exponential for non-commutative fields. It feels like everything is conspiring to make this hard.
+1. Another appraoch would be to use tensor networks instead of neural netwkorks. Tensor networks can represent exponentially large polynomials of bounded degree. However, that would go against the leading paradigm of DNN-based learning.
+
 
 **Questions:**
 1. Is there a better appraoch that does not require learning polynomial coefficients?
@@ -70,7 +76,7 @@ However, this seems complicated to train, as the network would need to learn pol
 1. How can we extend this to non-deterministic games?
 
 **Alternative: Tensor Networks:**
-Tensor networks can represent exponentially large polynomials of bounded degree. Training a tensor network kinda goes against leading deep learning paradigms, but maybe there is something to be gained here. 
+Tensor networks can represent exponentially large polynomials of bounded degree. Training a tensor network kinda goes against leading deep learning paradigms, but maybe there is something to be gained here.
 
 
 **Reasons why I believe this might work:**
