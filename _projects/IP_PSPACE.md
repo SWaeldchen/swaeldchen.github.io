@@ -33,7 +33,7 @@ However, we can extend the discussion with the AI up to polynomially many rounds
 
 This equality is usually demonstrated by reducing TQBL (Totally Quantified Boolean Formulas, a $\mathsf{PSPACE}$-complete problem) to $\mathsf{IP}$, see [wikipedia](https://en.wikipedia.org/wiki/IP_(complexity)#TQBF_is_a_member_of_IP). This reduction involves as a crucial step aithmetisation of the Boolean logic and [Polynomial Identity Testing (PIT)](https://en.wikipedia.org/wiki/Polynomial_identity_testing) via the [Schwartz-Zippel algorithm](https://en.wikipedia.org/wiki/Schwartz%E2%80%93Zippel_lemma) (basically sample randomly over a large-enough finite field).
 
-One can easily transform deterministic two-player games into TQBFs, for non-deterministic games I am not fully sure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf). The Boolean formula describes the game mechanic, i.e. what is the initial board situation, what kinds of moves are allowed and what is the win condition, in terms of binary variables.
+One can easily transform deterministic two-player games into TQBFs, see [here](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Encoding+Connect-4+using+Quantified+Boolean+Formulae+Ian+P+Gent+and+Andrew+G+D+Rowley&btnG=) for example. For non-deterministic games I am not fully sure of the procedure, but it should be possible, see [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBh_md2O3-AhXB4KQKHSpDA9g4FBAWegQICRAB&url=https%3A%2F%2Fwww.fi.muni.cz%2Fusr%2Fkucera%2Fpapers%2Fqest07.ps&usg=AOvVaw26TwTX8w9Em1wC-UHHo5Wu) and [here](https://research-explorer.ista.ac.at/download/3846/5897/a_survey_of_stochastic_omega-regular_games.pdf). The Boolean formula describes the game mechanic, i.e. what is the initial board situation, what kinds of moves are allowed and what is the win condition, in terms of binary variables.
 
 This TQBF can then be decided via the Interactive Proof reduction. Interestingly, the PIT consistency condition becomes very similar to a arithmetised version of the [Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation). I will add further details to illustrate that point later.
 In principle we replace
@@ -46,24 +46,32 @@ where $x \lor y = x + y - xy$, the arithmatisation of the logical OR.
 These return the same value, if there is only a binary reward for winning
 
 $$
-r(a_t, s_t) = \begin{cases} 0 & t<T, \\ \text{is_win}(s_t) & t = T \end{cases},
+r(a_t, s_t) = \begin{cases} 0 & t<T, \\ \text{is_win}(s_t) & t = T, \end{cases}
 $$
 
 and Q always predicts a binary reward. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
 
-
 I want to actually train an neural network-based agent to have arithmetic consistency via Reinforcement Learning and Gradient Descent.
+
+The straightforward way for implementation would be to let the neural network represent a polynomial oracle. The input would be an  assignment from the finite field to all but one variable, and the output would be the polynomial coefficients of the left over variable.
+However, this seems complicated to train, as the network would need to learn polynomial multiplication. One can make this easer by having quadratic activations functions additionally to the ReLU ones.
+
 
 **Implementation:**
 1. Use a simple deterministic game with finite time horizon (e.g. tic-tac-toe, Connect-Four, Hex)
-1. Train an AI to not only predict the whether the player can still win given a board situation. Extend this AI to predict the polynomial coefficients for the polynomial identity test, given the previous random samples of the $\mathsf{IP}$-protocol as input.
+1. Train an AI to predict the whether the player can still win given a board situation. Extend this AI to predict the polynomial coefficients for the polynomial identity test, given the previous random samples of the $\mathsf{IP}$-protocol as input.
 1. See how well the AI can be trained to actually fulfil the consistency checks.
 
 **Questions:**
-1. Can a neural network architecture learn to predict the right polynomial coefficients? Since the coefficients are from a finite field, there is some room to correct errors.
+1. Is there a better appraoch that does not require learning polynomial coefficients?
+1. If not, can a neural network architecture learn to predict the right polynomial coefficients? Since the coefficients are from a finite field, there is some room to correct errors.
 1. Can the whole methods be made robust for a system that makes mistakes sometimes? Could this involve relaxing the consistency condition?
 1. Can this be scaled up to more compled games?
 1. How can we extend this to non-deterministic games?
+
+**Alternative: Tensor Networks:**
+Tensor networks can represent exponentially large polynomials of bounded degree. Training a tensor network kinda goes against leading deep learning paradigms, but maybe there is something to be gained here. 
+
 
 **Reasons why I believe this might work:**
 1. Neural networks have become quite good at grokking abstract reasoning tasks,
