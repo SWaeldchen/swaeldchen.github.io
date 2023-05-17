@@ -75,10 +75,6 @@ However, this seems complicated to train, as the network would need to learn pol
 1. Can this be scaled up to more compled games?
 1. How can we extend this to non-deterministic games?
 
-**Alternative: Tensor Networks:**
-Tensor networks can represent exponentially large polynomials of bounded degree. Training a tensor network kinda goes against leading deep learning paradigms, but maybe there is something to be gained here.
-
-
 **Reasons why I believe this might work:**
 1. Neural networks have become quite good at grokking abstract reasoning tasks,
 1. As the reasoning capabilities of AI grows, certifying the game plan will become easier, even if the AI comes up with more complicated plans, since it becomes easier to implement the PIT.
