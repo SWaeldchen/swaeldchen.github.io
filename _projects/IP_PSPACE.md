@@ -49,7 +49,7 @@ $$
 r(a_t, s_t) = \begin{cases} 0 & t<T, \\ \text{is_win}(s_t) & t = T, \end{cases}
 $$
 
-and $Q\in \{0,1\}$, so $Q$ always predicts a binary reward. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
+and $Q(a_t, s_t) \in \{0,1\}$, so $Q$ always predicts a binary reward. Any game with intermediate reward can be turned into a game of binary reward, by just setting the win condition to $\sum_t r(a_t,s_t) \geq R_{\text{threshold}}$.
 
 I want to actually train an neural network-based agent to have arithmetic consistency via Reinforcement Learning and Gradient Descent.
 
