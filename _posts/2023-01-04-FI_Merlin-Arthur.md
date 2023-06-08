@@ -62,7 +62,9 @@ In this context, we can then translate the concepts of *completeness* and *sound
 
 These two quantities can be measured on a finite dataset and are used to lower bound the information contained in features selected by Merlin. Since these are simple scalar quantities, one can easily estimate them on the test set similar to the test accuracy of a normal classifier.
 
-History: Interactive classification had been introduced earlier in lei2016rationalizing and bastings2019interpretable -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
+### History
+
+Interactive classification had been introduced earlier in {% cite lei2016rationalizing --file formal_interpretability %}  and {% cite bastings2019interpretable --file formal_interpretability %} -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
 
 
 <div style="display: flex; justify-content: center;">
