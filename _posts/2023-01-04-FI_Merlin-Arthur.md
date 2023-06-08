@@ -62,9 +62,9 @@ In this context, we can then translate the concepts of *completeness* and *sound
 
 These two quantities can be measured on a finite dataset and are used to lower bound the information contained in features selected by Merlin. Since these are simple scalar quantities, one can easily estimate them on the test set similar to the test accuracy of a normal classifier.
 
-### History
+### Cheating with cooperative Prover and Verfier
 
-Interactive classification had been introduced earlier in {% cite lei2016rationalizing --file formal_interpretability %}  and {% cite bastings2019interpretable --file formal_interpretability %} -- without an adversarial aspect. It was then noted in {% cite lei2016rationalizing --file formal_interpretability %} that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
+Interactive classification had been introduced earlier in {% cite lei2016rationalizing --file formal_interpretability %}  and {% cite bastings2019interpretable --file formal_interpretability %} -- without an adversarial aspect. It was then noted in {% cite lei2016rationalizing --file formal_interpretability %} that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class, as illustrated in Figure 1.
 
 
 <div style="display: flex; justify-content: center;">
@@ -74,31 +74,23 @@ Interactive classification had been introduced earlier in {% cite lei2016rationa
 **Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
+If prover and verifier are purely cooperative, Merlin can decide the class and communicate it over an arbitrary code. The feature selected for this code need not have anything to do with the features that Merlin used to decide the class.
+However, any such strategy can be exploited by an adversarial prover (Morgana) to convince Arthur of the wrong class. The intuition is this: Let us assume the verifier accepts a feature as proof of a class that is uncorrelated with the class. Then this feature must also appear in datapoints of a different class. Morgana can then select this feature in the different class and convince the Arthur to give the wrong classification. 
 
+<div style="display: flex; justify-content: center;">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/strategy.svg" alt="img1" style="float:center; width:50%">
+  <p style="clear: both;"></p>
+</div>
+**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+{:.figcap}
 
-### Asymmetric Feature Correlation
-
-
-
-### Relative Strength of Merlin and Morgana
-
-
-
-### Interactive Classification
-
-Our goal is to design a classifier that guarantees feature based interpretability under reasonable assumptions.
-For this we develop the notion of interactive classification.  
-The inspiration for interactive classification comes from Interactive Proof Systems (IPS), a concept from Complexity Theory.
-Specifically, our work is motivated by the Merlin-Arthur protocol.
-Our setup consists of a classifer called Arthur (which corresponds to the verifier) and 2 feature selectors referred to as Merlin
-and Morgana (which correspond to provers).
-Merlin (one of the provers) selects a feature from a data point and sends it to the verifier, Arthur, who decides the class. Crucially, in IPS the prover is unreliable, sometimes trying to convince the verifier of a wrong judgement. We mirror this by having a second prover, Morgana, that tries to get Arthur to say the wrong class. Arthur is allowed to say "Don't know!" and thus refraining from classification.
-In this context, we can then translate the concepts of *completeness* and *soundness* from IPS to our setting. Completeness describes the probability that Arthur classifies correctly based on features from Merlin. Soundness is the probability that Arthur does not get fooled by Morgana, thus either giving the correct class or answering ''Don't know!''.
-These two quantities can be measured on a test dataset and are used to lower bound the information contained in features selected by Merlin.
-
-Interactive classification had been introduced earlier in [Lei2016] and [Bastings2019] -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
+Now we want to pack this intuition into theory!
 
 ### Theoretical Setup
+
+The
+
+
 For the sake of simplicity, we focus on the case of image classification and define our data points as corresponding to pixel values in an image.
 We can represent any point $\bfx$ in a data set $D$ as a set $\{(1,x_1), (2,x_2), \dots, (d, x_d)\}$ where the first term corresponds to the index of the pixel and the second term is the pixel value.
 The class of the data point $\bfx$ is given by $c(\bfx)$.
@@ -119,6 +111,18 @@ $$
 $$
 
 In order to evaluate the performance of Merlin and Morgana as feature selectors we need to first introduce the notions of Asymmetric Feature Correlation (AFC) and the Relative Strength of Merlin and Morgana.
+
+
+### Asymmetric Feature Correlation
+
+
+
+### Relative Strength of Merlin and Morgana
+
+
+
+
+
 
 ### Asymmetric Feature Correlation
 AFC describes a possible quirk of datasets, where a set of features, say $\Phi$, is strongly concentrated in a few data points in one
