@@ -75,10 +75,10 @@ Interactive classification had been introduced earlier in {% cite lei2016rationa
 {:.figcap}
 
 If prover and verifier are purely cooperative, Merlin can decide the class and communicate it over an arbitrary code. The feature selected for this code need not have anything to do with the features that Merlin used to decide the class.
-However, any such strategy can be exploited by an adversarial prover (Morgana) to convince Arthur of the wrong class. The intuition is this: Let us assume the verifier accepts a feature as proof of a class that is uncorrelated with the class. Then this feature must also appear in datapoints of a different class. Morgana can then select this feature in the different class and convince the Arthur to give the wrong classification. 
+However, any such strategy can be exploited by an adversarial prover (Morgana) to convince Arthur of the wrong class. The intuition is this: Let us assume the verifier accepts a feature as proof of a class that is uncorrelated with the class. Then this feature must also appear in datapoints of a different class. Morgana can then select this feature in the different class and convince the Arthur to give the wrong classification.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/strategy.svg" alt="img1" style="float:center; width:50%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/strategy.svg" alt="img1" style="float:center; width:100%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
