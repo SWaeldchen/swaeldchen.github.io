@@ -40,7 +40,7 @@ We present interactive classification as an approach to define informative featu
 
 
 In <a href="/blog/2023/FI_Preliminaries/">a previous post</a> we discussed why it is difficult to model the conditional data distribution. This distribution is used to define feature importance according to high Mutual Information or Shapley Values.
-Now, we explain how this issue can be circumvented by designing an inherently interpretable classifier through an interactive classification setup. This setup will allow us to derive lower bounds on the **precision** of the features in terms of quantities that can be easily estimated on a dataset.
+Now, we explain how this issue can be circumvented by designing an inherently interpretable classifier through an interactive classification setup. This setup will allow us to derive lower bounds on the **precision** of the features in terms of quantities that can be easily estimated on a dataset. {% cite lundberg2017unified --file formal_interpretability %}
 
 ### Interactive Classification
 
@@ -64,7 +64,7 @@ These two quantities can be measured on a finite dataset and are used to lower b
 
 ### History
 
-Interactive classification had been introduced earlier in {% cite lei2016rationalizing --file formal_interpretability %}  and {% cite bastings2019interpretable --file formal_interpretability %} -- without an adversarial aspect. It was then noted in [Yu2019] that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
+Interactive classification had been introduced earlier in {% cite lei2016rationalizing --file formal_interpretability %}  and {% cite bastings2019interpretable --file formal_interpretability %} -- without an adversarial aspect. It was then noted in {% cite lei2016rationalizing --file formal_interpretability %} that in that case Merlin and Arthur can "cheat" and use uninformative features to communicate the class.
 
 
 <div style="display: flex; justify-content: center;">
@@ -193,7 +193,6 @@ select the features with the context of the full data point.
 1. We do not make the assumption that features are independently distributed. Instead, we introduce the notion
 of Asymmetric Feature Correlation (AFC) that captures which correlations make an information bound
 difficult.
-
 
 
 
