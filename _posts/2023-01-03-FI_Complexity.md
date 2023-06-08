@@ -20,6 +20,8 @@ We explain the computational complexity of interpreting neural network classifie
 1. Further Relaxation
 1. Practical Approach
 
+{% cite lundberg2017unified --file formal_interpretability %}
+
 <!--more-->
 
 More will follow here, when I have the time!
