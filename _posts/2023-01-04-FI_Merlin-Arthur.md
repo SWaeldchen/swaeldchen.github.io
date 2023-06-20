@@ -88,8 +88,14 @@ Now we want to pack this intuition into theory!
 
 ### Theoretical Setup
 
-The
+What exactly constitutes a feature can be up for debate.
 
+<div style="display: flex; justify-content: center;">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/house.svg" alt="img1" style="float:center; width:90%">
+  <p style="clear: both;"></p>
+</div>
+**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+{:.figcap}
 
 For the sake of simplicity, we focus on the case of image classification and define our data points as corresponding to pixel values in an image.
 We can represent any point $\bfx$ in a data set $D$ as a set $\{(1,x_1), (2,x_2), \dots, (d, x_d)\}$ where the first term corresponds to the index of the pixel and the second term is the pixel value.
