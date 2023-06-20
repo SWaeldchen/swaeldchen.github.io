@@ -91,7 +91,7 @@ Now we want to pack this intuition into theory!
 What exactly constitutes a feature can be up for debate.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/house.svg" alt="img1" style="float:center; width:90%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/house.svg" alt="img1" style="float:center; width:70%">
   <p style="clear: both;"></p>
 </div>
 **Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
