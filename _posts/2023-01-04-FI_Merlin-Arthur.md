@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formal Interpretability 3: Interactive Classification"
+title:  "Formal Interpretability 2: Interactive Classification"
 date:   2023-01-04 00:00:00 +0100
 categories: [research]
 tags: [optimization, ml, uniform convexity, abstract]
@@ -14,7 +14,6 @@ $\newcommand{\bfx}{\mathbf{x}}$
 $\newcommand{\bfy}{\mathbf{y}}$
 $\newcommand{\bfz}{\mathbf{z}}$
 $\newcommand{\ap}{\text{Pr}}$
-$\newcommand{\CD}{\mathcal{D}}$
 $\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$
 $\newcommand{\E}{\mathbb{E}}$
 $\renewcommand{\P}{\mathbb{P}}$
@@ -22,20 +21,22 @@ $\newcommand{\morg}{\widehat{M}}$
 $\newcommand{\CA}{\mathcal{A}}$
 $\newcommand{\CM}{\mathcal{M}}$
 
+{% include abbrv.html %}
+
 <style>
   .figcap {
     font-size: 0.9em;
   }
 </style>
 
-This post is part 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part 2 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
 
 *TL;DR:
 We present interactive classification as an approach to define informative features without modelling the data distribution explicitly
 
-1. Interactive Classification with Prover and Verifier: why the prover needs to be unreliable
-1. Asymmetric Feature Correlation
-1. Do we need a game equilibrium?
+1. Why we need an adversarial aspect to the prover
+1. Abstract definition of features
+1. A min-max theorem
 <!--more-->
 
 
@@ -71,141 +72,95 @@ Interactive classification had been introduced earlier in {% cite lei2016rationa
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/cheating.svg" alt="img1" style="float:center; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+**Figure 2.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
-If prover and verifier are purely cooperative, Merlin can decide the class and communicate it over an arbitrary code. The feature selected for this code need not have anything to do with the features that Merlin used to decide the class.
+If prover and verifier are purely cooperative, Merlin can decide the class and communicate it over an arbitrary code! The feature selected for this code need not have anything to do with the features that Merlin used to decide the class. See Figure 1 for an Illustration. We showed that this happens in practice in ...
+
 However, any such strategy can be exploited by an adversarial prover (Morgana) to convince Arthur of the wrong class. The intuition is this: Let us assume the verifier accepts a feature as proof of a class that is uncorrelated with the class. Then this feature must also appear in datapoints of a different class. Morgana can then select this feature in the different class and convince the Arthur to give the wrong classification.
 
 <div style="display: flex; justify-content: center;">
   <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/strategy.svg" alt="img1" style="float:center; width:100%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+**Figure 3.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
 {:.figcap}
 
 Now we want to pack this intuition into theory!
 
 ### Theoretical Setup
 
-What exactly constitutes a feature can be up for debate.
+What exactly constitutes a feature can be up for debate. Most common are features that are defined as partial input vectors, like a cutout from an image. There are more abstract definitions such as anchors {% cite ribeiro2018anchors --file formal_interpretability %}  or queries {% cite chen2018learning --file formal_interpretability %}. Here, we leave our features completely abstract and define them as a set of datapoints. This can be interpreted as the set of datapoints that contain the feature, see Figure 4 for  an illustration.
 
 <div style="display: flex; justify-content: center;">
-  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/house.svg" alt="img1" style="float:center; width:70%">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/house.svg" alt="img1" style="float:center; width:50%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** An example of a decision list taken from {% cite rudin2019stop --file formal_interpretability %} used to predict whether a delinquent will be arrested again. The reasoning of the decision list is directly readable.)
+**Figure 4.** An example of a feature defined in two different ways: on the left via concrete pixel values, on the right as a set of all images that have these pixel values. The set definition, however, allows to construct much more general features. We can, for example, include shifts and rotations of the pixel values, as well as other transformations, by expanding the set.
 {:.figcap}
 
-For the sake of simplicity, we focus on the case of image classification and define our data points as corresponding to pixel values in an image.
-We can represent any point $\bfx$ in a data set $D$ as a set $\{(1,x_1), (2,x_2), \dots, (d, x_d)\}$ where the first term corresponds to the index of the pixel and the second term is the pixel value.
-The class of the data point $\bfx$ is given by $c(\bfx)$.
-A feature of $x$ is then represented by a subset of $x$ which corresponds to a collection of pixels. Thus, a data point $x$ contains a feature $z$ if $z \subseteq x$.
-Our setup consists of two feature classifiers Merlin, denoted by $M$, and Morgana, denoted by $\widehat{M}$.
+So form now on we assume that our data space $D$ comes equipped with a feature space $\Sigma \subset 2^{D}$, which is a set of subsets of $D$. In terms of precision (see <a href="/blog/2023/FI_Preliminaries/">former post</a>) we can say that a feature has high precision if it contains datapoints mostly belonging to the same class. Such a feature is highly informative of the class.
 
-With this in mind, we define the notion of Average Precision which will allows us to evaluate the quality of the feature selectors
-and measure the performance of our framework.  
+#### Definitions for Prover (Feature Selector) and Verifier (Feature Classifier)
+
+**Feature Selector:**
+For a given dataset $D$, we define a *feature selector* as a map $M:D \rightarrow \Sigma$ such that for all $\bfx \in D$ we have $ \bfx \in M(\bfx)$. This means that for every data point $\bfx \in D$ the feature selector $M$ chooses a feature that is present in $\bfx$. We call $\CM(D)$ the space of all feature selectors for a dataset $D$.
+
+**Feature Classifier:**
+We define a *feature classifier* for a dataset $D$ as a function $A: \Sigma \rightarrow \skl{-1,0,1}$. Here, $0$ corresponds to the situation where the classifier is unable to identify a correct class. We call the space of all feature classifiers $\CA$.
+
+We can extend the definition of the precision of a feature to the expected precision of a feature selector, which will allows us to evaluate the quality of the feature selectors and measure the performance of our framework.  
 
 $$
 \ap_{\CD}(M) := \E_{\bfx\sim \CD} \ekl{\P_{\bfy\sim\CD}\ekl{c(\bfy) = c(\bfx) \,|\, M(\bfx) \subseteq \bfy}}.
 $$
 
-The average precision $\ap_{\CD}(M)$ can be used to bound the average conditional entropy and mutual information of the features identified by Merlin.
+The expected precision $\ap_{\CD}(M)$ can be used to bound the expected conditional entropy and mutual information of the features identified by Merlin.
 
 $$
 \E_{\bfx \sim \CD} [I_{\bfy\sim\CD}(c(\bfy); M(\bfx) \subseteq \bfy)] \geq H_{\bfy\sim\CD}(c(\bfy)) - H_b(\ap_{\CD}(M)).
 $$
 
-In order to evaluate the performance of Merlin and Morgana as feature selectors we need to first introduce the notions of Asymmetric Feature Correlation (AFC) and the Relative Strength of Merlin and Morgana.
+We can now state our first result of our investigation.
+
+#### A Min-Max Theorem:
+
+For a feature classifier $A$ (Arthur) and two feature selectors $M$ (Merlin) and $\widehat{M}$ (Morgana) we define
+\begin{equation}\label{eq:am:min_max}
+ E_{M,\widehat{M},A} := \skl{x \in D\,\middle|\,
+ A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)},
+\end{equation}
+which is the set of all datapoints where either Merlin cannot convince Arthur of the right class, or Morgana can convince him of the wrong class, in short, the datapoints where Arthur fails.
 
 
-### Asymmetric Feature Correlation
+**Min-Max Theorem:** Let $M\in \CM(D)$ be a feature selector and let
 
+ $$
+ \epsilon_M = \min_{A \in \CA} \max_{\widehat{M} \in \CM} \,\P_{\bfx\sim \CD}\ekl{\bfx \in E_{M,\widehat{M},A}}.
+ $$
 
+ Then a set $D^{\prime}\subset D$ with $\P_{\bfx\sim \CD}\ekl{\bfx \in D^\prime} \geq 1-\epsilon_M$ exists such that for
+ $$\CD^\prime = \CD|_{D^\prime}$$. we have
 
-### Relative Strength of Merlin and Morgana
+ $$
+  \ap_{\CD^\prime}(M) = 1, \quad \text{thus}\quad H_{\bfx,\bfy\sim\CD^\prime}(c(\bfy) \;|\; \bfy \in M(\bfx)) = 0.
+ $$
 
+This means that, if Merlin and Arthur cooperate successfully (i.e. small $\epsilon_M$), then there is a set that covers almost the whole original set (up to $\epsilon_M$) conditioned on which the features selected by Merlin determine the class perfectly.
 
-
-
-
-
-### Asymmetric Feature Correlation
-AFC describes a possible quirk of datasets, where a set of features, say $\Phi$, is strongly concentrated in a few data points in one
-class (called $A$) and spread out over almost all data points in another class (called $B$). Because of this quirk, Merlin can use the features that are spread over all data points to indicate class $B$. The amount of error that Morgana can then cause is limited to the few datapoints from class $A$ that also contain the features $\Phi$.
-This ensures a small error even with potentially un-informative features by leveraging the distribution of the features across the classes.  
-We formally define this notion as follows:
-
-Let $(D,\CD,c)$ be a two-class data space, then the asymmetric feature correlation $\kappa$ is defined as
-
-$$
-\kappa = \max_{l\in \{-1,1\}} \max_{F \subset D_p} \E_{\bfy \sim \CD_l|_{F^*}}\ekl{\max_{\substack{\bfz \in F \\ \text{s.t. }\bfy \in \bfz}}\kappa_l(\bfz, F)}
-$$
-
-with
-
-$$
-  \kappa_l(\bfz, F) = \frac{\P_{\bfx \sim \CD_{-l}}\ekl{\bfz \subseteq \bfx \,\middle|\, \bfx \in F^*}}{\P_{\bfx \sim \CD_l}\ekl{\bfz \subseteq \bfx \,\middle|\, \bfx \in F^*}}.
-$$
-
-where
+Now, the formulation of this theorem is a bit curious. Why can we not directly state something like
 
 $$
-F^\ast := \left\{\bfx \in D~|~ \exists~ \bfz \in F: \bfz \subseteq \bfx\right\},
+  \ap_{\CD}(M) \geq 1-\epsilon_{M}?
 $$
 
-### Relative Strength of Merlin and Morgana
-Another important metric that we care about is the relative strength of the Merlin and Morgana classifiers. This is especially important if we intend to apply our setup to real data sets where Merlin and Morgana are not able to find the optimal features are every step.
-We can relax the requirement of Morgana to play optimally as long as it can find features almost as successfully as Merlin.
-With this in mind, we define the notion of relative success rate as follows
-Let $\mathfrak{D}=(D, \CD, c)$ be a two-class data space. Let $A\in \CA$ and $M, \morg \in \CM(D)$.
-Then the relative success rate $\alpha$ of $\morg$ with respect to $A,M$ and $\mathfrak{D}$ is defined as
+The problem lies in a potential quirk in the dataset that makes it hard to connect the informativeness of the whole feature set to the individual features.
 
-$$
-   \alpha := \min_{l\in \{-1,1\}} \frac{\P_{\bfx\sim \CD_{-l}}\ekl{A(\morg(\bfx))=l \,|\, \bfx \in F_l^\ast}}{\P_{\bfx\sim \CD_{l}}\ekl{A(M(\bfx))=l \,|\, \bfx \in F_l^\ast}},
-$$
+### Key Insights:
 
-where
-
-$$F_{l} := \{\bfz \in D_p \,|\, \bfz\in M(D_l), A(\bfz)=l\}.$$
-
-### Key Result
-
-With the above two notions of Relative Strength and Asymmetric Feature Correlation in mind, we can provide a key theoretical result of this paper.
-
-Let $\mathfrak{D}=(D, \CD, c)$ be a two-class data space with AFC of $\kappa$ and class imbalance $B$. Let $A\in \CA$, and $M, \widehat{M}\in\CM(D)$ such that $\widehat{M}$ has a relative success rate of $\alpha$ with respect to $A, M$ and $\mathfrak{D}$.
-Define
-
-1. Completeness:
-$$
-\min\limits_{l \in \{-1,1\}}\P_{\bfx \sim \CD_l}\ekl{A(M(\bfx)) = c(\bfx) } \geq 1- \epsilon_c,
-$$
-2. Soundness
-$$
-\max\limits_{l \in \{-1,1\}} \P_{\bfx \sim \CD_l}\ekl{A(\morg(\bfx)) = -c(\bfx) } \leq  \epsilon_s.
-$$
-
-where $\CD_l$ is the data distribution conditioned on the class $l$.
-Then it follows that
-
-$$
-\ap_{\CD}(M) \geq 1 - \epsilon_c - \frac{ \kappa \alpha^{-1}\epsilon_s}{1 - \epsilon_c+ \kappa \alpha^{-1}B^{-1}\epsilon_s}.
-$$
-
-This result shows that we can bound the performance of the feature selector Merlin (in terms of average precision) in the Merlin-Arthur framework using measurable metrics such as completeness and soundness.
-
-### Key Takeaways
-The above theoretical discussion shows two key contributions of our framework.
-1. We do not assume our agents to be optimal. In the presented theorem Merlin is allowed to have any arbitrary strategy.
-We rather rely on the relative strength of Merlin and Morgana for our bound. We also allow our provers to
-select the features with the context of the full data point.
-
-1. We do not make the assumption that features are independently distributed. Instead, we introduce the notion
-of Asymmetric Feature Correlation (AFC) that captures which correlations make an information bound
-difficult.
-
-
-
+1. Without an adversarial prover, Merlin and Arthur can communicate through an arbitrary code of features that are unrelated to the true class.
+1. We can derive a min-max theorem that connects the completeness and soundness of Arthur and Merlin's strategy to the informativeness of the features.
+1. Crucially, compared to ..., we do not rely on the unrealistic assumption that the features are uncorrelated.
 
 ### References
 
