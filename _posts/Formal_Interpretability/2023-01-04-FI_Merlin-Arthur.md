@@ -126,10 +126,13 @@ We can now state our first result of our investigation.
 #### A Min-Max Theorem:
 
 For a feature classifier $A$ (Arthur) and two feature selectors $M$ (Merlin) and $\widehat{M}$ (Morgana) we define
-\begin{equation}\label{eq:am:min_max}
+
+$$
+\label{eq:am:min_max}
  E_{M,\widehat{M},A} := \skl{x \in D\,\middle|\,
  A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)},
-\end{equation}
+$$
+
 which is the set of all datapoints where either Merlin cannot convince Arthur of the right class, or Morgana can convince him of the wrong class, in short, the datapoints where Arthur fails.
 
 

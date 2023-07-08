@@ -21,3 +21,5 @@ social: true  # includes social icons at the bottom of the page
 Researcher in AI Interpretabilty and Mathematics of Deep Neural Networks. Co-Head of [Robust and Explainable Learning group at IOL Lab](https://iol.zib.de/research/#LEARN) at Zuse Institute Berlin.
 
 Currently also writing a <a href="projects/AI_Musical">Musical♫♫</a>!
+
+Generally interested in <a href="/blog/2023/AI_Safety/">AI safety</a> and specifically building a theory of neural network interpretability.
