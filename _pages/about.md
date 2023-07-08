@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Zuse Institute Berlin</a>
+subtitle: My personal blog
 
 profile:
   align: left
