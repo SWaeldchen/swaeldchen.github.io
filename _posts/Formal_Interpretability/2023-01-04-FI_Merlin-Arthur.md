@@ -132,7 +132,7 @@ For a feature classifier $A$ (Arthur) and two feature selectors $M$ (Merlin) and
 
 $$
  E_{M,\widehat{M},A} := \{x \in D\,|\,
- A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)\},
+ A(M(\bfx)) \neq c(\bfx) ~\lor~  A(\widehat{M}(\bfx)) = -c(\bfx)\},
 $$
 
 which is the set of all datapoints where either Merlin cannot convince Arthur of the right class, or Morgana can convince him of the wrong class, in short, the datapoints where Arthur fails.
