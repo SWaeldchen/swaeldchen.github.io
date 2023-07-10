@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formal Interpretability 4: Relative Strength of Cooperative and Adversarial Prover"
+title:  "Interactive Classification 4: Relative Strength of Cooperative and Adversarial Prover"
 date:   2023-01-04 00:00:00 +0100
 categories: [research]
 tags: [optimization, ml, uniform convexity, abstract]
@@ -29,7 +29,7 @@ $\newcommand{\CM}{\mathcal{M}}$
   }
 </style>
 
-This post is part 3 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part 3 of my series on <a href="/blog/2023/FI_start/">Interactive Classification</a>.
 
 *TL;DR:
 It's not necessary that Morgana plays perfectly to counter Merlin, only that she is able to find similar features with a comparable success rate. We go over

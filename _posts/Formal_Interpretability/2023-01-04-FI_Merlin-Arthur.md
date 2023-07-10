@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formal Interpretability 2: Interactive Classification"
+title:  "Interactive Classification 2: Interactive Classification"
 date:   2023-01-04 00:00:00 +0100
 categories: [research]
 tags: [optimization, ml, uniform convexity, abstract]
@@ -20,6 +20,7 @@ $\renewcommand{\P}{\mathbb{P}}$
 $\newcommand{\morg}{\widehat{M}}$
 $\newcommand{\CA}{\mathcal{A}}$
 $\newcommand{\CM}{\mathcal{M}}$
+$\newcommand{\CD}{\mathcal{D}}$
 
 {% include abbrv.html %}
 
@@ -29,7 +30,7 @@ $\newcommand{\CM}{\mathcal{M}}$
   }
 </style>
 
-This post is part 2 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part 2 of my series on <a href="/blog/2023/FI_start/">Interactive Classification</a>.
 
 *TL;DR:
 We present interactive classification as an approach to define informative features without modelling the data distribution explicitly

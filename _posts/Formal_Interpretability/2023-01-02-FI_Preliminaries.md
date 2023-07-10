@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formal Interpretability 1: Preliminaries"
+title:  "Interactive Classification 1: Preliminaries"
 date:   2023-01-02 00:00:00 +0100
 categories: [research]
 tags: [interpretability, feature importance attribution, fia, modelling problem]
@@ -10,7 +10,7 @@ giscus_comments: true
 author: Stephan Wäldchen
 ---
 
-This post is part 1 of my series on <a href="/blog/2023/FI_start/">Formal Interpretability</a>.
+This post is part 1 of my series on <a href="/blog/2023/FI_start/">Interactive Classification</a>.
 
 **TL;DR:**
 We present an overview of the current approaches and hurdles for formal interpretability:
