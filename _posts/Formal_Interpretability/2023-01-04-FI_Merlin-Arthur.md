@@ -109,7 +109,9 @@ So form now on we assume that our data space $D$ comes equipped with a feature s
 For a given dataset $D$, we define a *feature selector* as a map $M:D \rightarrow \Sigma$ such that for all $\bfx \in D$ we have $ \bfx \in M(\bfx)$. This means that for every data point $\bfx \in D$ the feature selector $M$ chooses a feature that is present in $\bfx$. We call $\CM(D)$ the space of all feature selectors for a dataset $D$.
 
 **Feature Classifier:**
-We define a *feature classifier* for a dataset $D$ as a function $A: \Sigma \rightarrow \{-1,0,1\}$. Here, $0$ corresponds to the situation where the classifier is unable to identify a correct class. We call the space of all feature classifiers $\CA$.
+We define a *feature classifier* for a dataset $D$ as a function
+
+$$A: \Sigma \rightarrow \{-1,0,1\}$$. Here, $0$ corresponds to the situation where the classifier is unable to identify a correct class. We call the space of all feature classifiers $\CA$.
 
 We can extend the definition of the precision of a feature to the expected precision of a feature selector, which will allows us to evaluate the quality of the feature selectors and measure the performance of our framework.  
 
@@ -130,8 +132,8 @@ We can now state our first result of our investigation.
 For a feature classifier $A$ (Arthur) and two feature selectors $M$ (Merlin) and $\widehat{M}$ (Morgana) we define
 
 $$
- E_{M,\widehat{M},A} := \skl{x \in D\,\middle|\,
- A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)},
+ E_{M,\widehat{M},A} := \{x \in D\,\middle|\,
+ A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)\},
 $$
 
 which is the set of all datapoints where either Merlin cannot convince Arthur of the right class, or Morgana can convince him of the wrong class, in short, the datapoints where Arthur fails.
