@@ -22,7 +22,6 @@ $\newcommand{\morg}{\widehat{M}}$
 $\newcommand{\CA}{\mathcal{A}}$
 $\newcommand{\CM}{\mathcal{M}}$
 $\newcommand{\CD}{\mathcal{D}}$
-$\newcommand{\CD}{\mathcal{D}}$
 
 {% include abbrv.html %}
 
@@ -131,7 +130,6 @@ We can now state our first result of our investigation.
 For a feature classifier $A$ (Arthur) and two feature selectors $M$ (Merlin) and $\widehat{M}$ (Morgana) we define
 
 $$
-\label{eq:am:min_max}
  E_{M,\widehat{M},A} := \skl{x \in D\,\middle|\,
  A\kl{M(\bfx)} \neq c(\bfx) ~\odr  A\kl{\widehat{M}(\bfx)} = -c(\bfx)},
 $$
