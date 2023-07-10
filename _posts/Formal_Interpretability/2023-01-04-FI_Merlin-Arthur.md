@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Interactive Classification 2: Interactive Classification"
+title:  "Interactive Classification 2: Prover-Verifier Setup"
 date:   2023-01-04 00:00:00 +0100
 categories: [research]
 tags: [optimization, ml, uniform convexity, abstract]
@@ -15,11 +15,13 @@ $\newcommand{\bfy}{\mathbf{y}}$
 $\newcommand{\bfz}{\mathbf{z}}$
 $\newcommand{\ap}{\text{Pr}}$
 $\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$
+$\newcommand{\skl}[1]{\mathopen{}\left{ #1 \right}\mathclose{}}$
 $\newcommand{\E}{\mathbb{E}}$
 $\renewcommand{\P}{\mathbb{P}}$
 $\newcommand{\morg}{\widehat{M}}$
 $\newcommand{\CA}{\mathcal{A}}$
 $\newcommand{\CM}{\mathcal{M}}$
+$\newcommand{\CD}{\mathcal{D}}$
 $\newcommand{\CD}{\mathcal{D}}$
 
 {% include abbrv.html %}
