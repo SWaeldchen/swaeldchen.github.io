@@ -10,20 +10,10 @@ giscus_comments: true
 author: Stephan Wäldchen
 ---
 
-$\newcommand{\bfx}{\mathbf{x}}$
-$\newcommand{\bfy}{\mathbf{y}}$
-$\newcommand{\bfz}{\mathbf{z}}$
-$\newcommand{\ap}{\text{Pr}}$
-$\newcommand{\ekl}[1]{\mathopen{}\left[ #1 \right]\mathclose{}}$
-$\newcommand{\skl}[1]{\mathopen{}\left\{ #1 \right\}\mathclose{}}$
-$\newcommand{\E}{\mathbb{E}}$
-$\renewcommand{\P}{\mathbb{P}}$
-$\newcommand{\morg}{\widehat{M}}$
-$\newcommand{\CA}{\mathcal{A}}$
-$\newcommand{\CM}{\mathcal{M}}$
-$\newcommand{\CD}{\mathcal{D}}$
-
 {% include abbrv.html %}
+
+$\newcommand{\ap}{\text{Pr}}$
+$\newcommand{\morg}{\widehat{M}}$
 
 <style>
   .figcap {
