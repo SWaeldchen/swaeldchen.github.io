@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Mixed Integer Linear Programs for Adversarial Robustness
-description: Can we use MILP-Solvers to find
+description: Make certified robustness bounds for neural networks feasible via a new algorithm based on MILP solvers.
 img:
 importance: 1
 category: Robustness
 ---
 {% include abbrv.html %}
-
-Use Mixed Integere (Linear) Programs to get certified robustness bounds.
 
 
 ## The Problem:
