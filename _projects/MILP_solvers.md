@@ -7,8 +7,6 @@ importance: 1
 category: Robustness
 ---
 {% include abbrv.html %}
-
-
 ## The Problem:
 
 
@@ -20,7 +18,7 @@ $$
 
 where $f$ is given as a neural network and $C$ is some convex region. This problem arises from questions of adversarial robustness, where $
 C = \skl{\bfx\in \R^n:~ \nkl{\bfx - \bfx_{\text{sample}} } \leq \epsilon},
-$ formal verification or networks to interpretability.
+$ formal verification of networks and interpretability.
 
 Generally, this is a $\SNP$-hard problem and any general solution strategy will take exponentially long in the worst case. However, real-world trained neural networks do not necessarily represent the worst-case. Thus a heuristic algorithm like Gradient Descent works reasonably well in solving this problem.
 
@@ -113,7 +111,7 @@ The forward pass increases the lower bound on the maximal output value, while th
   <img src="{{site.url }}{{site.baseurl }}/assets/img/constraint_propagation.svg" alt="img1" style="float:center; margin-right: 5%; width:65%">
   <p style="clear: both;"></p>
 </div>
-**Figure 1.** Illustation for a layer of width 2. The known constraints result in the light green convex area. The dark green arrows mark the linear problem for each ReLU region. The point $a^}
+**Figure 1.** Illustation for a layer of width 2. The known constraints result in the light green convex area. The dark green arrows mark the linear problem for each ReLU region. The point $a^\ast$ is the solution to the resulting maximisation problem. If this target cannot be reached in the next lower layer, the active direction $\bfd = \bfa^* - \bfk$ is optimised instead, which leads to the next maximisation problem.}
 
 
 ## How to determine the active direction?
