@@ -24,7 +24,7 @@ When this was conceived, the main motivation was to alert the public about the d
 
 Here is one snapshot from our creative process:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ArvxxTczKRo?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/0lqtGA7RS5w?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Current Progress:**
 
