@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Projects
+title: Science
 permalink: /projects/
-description: My research and hobby projects
+description: My research projects and open questions
 nav: true
 nav_order: 2
-display_categories: [Alignment, Interpretability, Robustness, Hobby]
+display_categories: [Alignment, Interpretability, Robustness]
 horizontal: false
 ---
 

@@ -4,7 +4,7 @@ title: Arithmetic Reinforcement Learning and Certifiable Game Plans
 description: Can we certify the plan of a powerful but possibly adversarial AI?
 img:
 importance: 1
-category: Interpretability
+category: Alignment
 ---
 
 
