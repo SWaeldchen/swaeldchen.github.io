@@ -19,7 +19,7 @@ Basically the roots always do what you want - except if they can't. Then they do
 <br><br>
 [**Philosopher Battle (LD32)**](https://web.archive.org/web/20161220081423/http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=11335):
 This is an epic battle of the minds!
-Take the role as one of the most famous philosophers of history and convince your opponents of your worldview.  [<span style="color:blue" font-weight:bold>Playable Web-Link</span>](https://bubu1.eu/LD32/post_compo/)
+Take the role as one of the most famous philosophers of history and convince your opponents of your worldview.  <a style="font-weight:bold" href="https://bubu1.eu/LD32/post_compo/">Playable Web-Link</a>
 
 The game features 9 different philosophers, each with 3 general and 3 personal attacks based on their respective philosophy.
 Attacks can deal damage to the conviction of the opponent if they are convincing; or they reduce his sanity if they are confusing.
@@ -38,7 +38,7 @@ Esc for menu.
 <br><br>
 [**Button Sniper (LD34)**](https://web.archive.org/web/20170910234206/http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=11335)
 Esc for menu. R for reload. If the web version is too slow use the download version (requires java).
-There is one nasty bug: When you pause the game, all of the moving platforms get completely out of sync. Just reset the level then. [<span style="color:blue" font-weight:bold>Playable Web-Link</span>](https://bubu1.eu/LD34/)
+There is one nasty bug: When you pause the game, all of the moving platforms get completely out of sync. Just reset the level then. <a style="font-weight:bold" href="https://bubu1.eu/LD34/">Playable Web-Link</a>
 
 ------------------------------
 
@@ -65,7 +65,7 @@ Use your buttons to deactivate the laser security system in various levels. Pay 
 <br><br>
 [**Gerry Wins (LD35)**](https://web.archive.org/web/20160501063822/http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=11335)
 
-Gerry Wins! is a game about the democratic process in the animal kingdom. [<span style="color:blue" font-weight:bold>Playable Web-Link</span>](https://bubu1.eu/LD35-Gerry-Wins/)
+Gerry Wins! is a game about the democratic process in the animal kingdom. <a style="font-weight:bold" href="https://bubu1.eu/LD35-Gerry-Wins/">Playable Web-Link</a>
 
 The player is tasked with designing new districts to ensure his supported candidate wins the general elections, see [Gerrymendering](https://de.wikipedia.org/wiki/Gerrymandering).
 

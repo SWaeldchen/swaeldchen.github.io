@@ -224,6 +224,8 @@ Taking any image $$\mathbf{x}$$ from ImageNet for example and conditioning on a 
 
 In the next post we discuss how this problem can be overcome by replacing the modelling of the data distribution with an adversarial setup.
 
+<a href="/blog/2023/FI_start/">&#9664; Previous Post</a>
+<p align="right"><a href="/blog/2023/FI_Merlin-Arthur/"> Next Post &#9654;</a></p>
 
 ### References
 

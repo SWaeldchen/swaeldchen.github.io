@@ -149,13 +149,29 @@ $$
   \ap_{\CD}(M) \geq 1-\epsilon_{M}?
 $$
 
-The problem lies in a potential quirk in the dataset that makes it hard to connect the informativeness of the whole feature set to the individual features.
+The problem lies in a potential quirk in the dataset that makes it hard to connect the informativeness of the whole feature set to the individual features. We explore this more in the next post about the <a href="/blog/2023/FI_AFC/">Asymmetric Feature Correlation</a>.
+
+#### Comparison with Adversarial Robustness
+
+Robustness with respect to Morgana can be seen as a type of adversarial robustness. We recall that the objective of the regular adversary is
+
+$$
+ \argmax_{\nkl{\bfdelta} \leq \epsilon} L(\bfx + \bfdelta).
+$$
+
+The underlying interpretation is: "Changing the input by an imperceptible amount should not convince the classifier of a different class." The interpretation of robustness against Morgana is: "Covering parts of the input should not convince the classifier of a different class." Or even more plainly, covering parts of a dog image should not convince the classifier or a cat. At most the classifier becomes unsure and refuses to classify. It is thus a natural robustness that we should expect from well-generalising classifiers.
+
+
 
 ### Key Insights:
 
 1. Without an adversarial prover, Merlin and Arthur can communicate through an arbitrary code of features that are unrelated to the true class.
 1. We can derive a min-max theorem that connects the completeness and soundness of Arthur and Merlin's strategy to the informativeness of the features.
-1. Crucially, compared to ..., we do not rely on the unrealistic assumption that the features are uncorrelated.
+1. The robustness against the Morgana adversary is reasonable and necessary to generalise to partially hidden objects.
+
+
+<a href="/blog/2023/FI_Preliminaries/">&#9664; Previous Post</a>
+<p align="right"><a href="/blog/2023/FI_AFC/" align="right"> Next Post &#9654;</a></p>
 
 ### References
 

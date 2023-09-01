@@ -21,7 +21,7 @@ $\newcommand{\morg}{\widehat{M}}$
   }
 </style>
 
-This post is part 3 of my series on <a href="/blog/2023/FI_start/">Interactive Classification</a>.
+This post is part 4 of my series on <a href="/blog/2023/FI_start/">Interactive Classification</a>.
 
 *TL;DR:
 It's not necessary that Morgana plays perfectly to counter Merlin, only that she is able to find similar features with a comparable success rate. We go over
@@ -48,14 +48,21 @@ $$
 where
 $$F_{l} := \{\phi \in \Sigma \,|\, \bfz\in M(D_l), A(\bfz)=l\}$$ is the set that Merlin uses to successfully convince Arthur of class $l$. In plain words: Given that the the datapoint has a feature that Merlin could successfully use, how likely is Morgana to discover this feature relative to Merlin?
 
-It stands to reason that if both provers are implemented by the same algorithm, their performance should be similar. Of course, as with anything neural network related that might be hard to prove in practice.
+It stands to reason that if both provers are implemented by the same algorithm, their performance should be similar. Of course, as with anything neural network related that might be hard to prove in practice. In **Figure 1** we present an example of an exponentially bad relative strength for a as long as Morgana is implemented with a polynomial-time algorithm.
 
-
+<div style="display: flex; justify-content: center;">
+  <img src="{{site.url }}{{site.baseurl }}/assets/img/merlin_arthur/random_sparse.svg" alt="img1" style="float:center; width:80%">
+  <p style="clear: both;"></p>
+</div>
+<br>
+**Figure 1.** Illustration of a dataset where Morgana's task is computationally harder than the one of Merlin and we should expect a very low relative strength. Class $-1$ consists of $k$-sparse images whose pixel values sum to some number $S$. For each of these images, there is a non-sparse image in class $1$ that shares all non-zero values (marked in red for the first image). Merlin can use the strategy to show all $k$ non-zero pixels for an image from class $-1$ and $k+1$ arbitrary non-zero pixels for class $1$. Arthur checks if the sum is equal to $S$ or if the number of pixels equal to $k+1$, otherwise he says "Don't know!". He will then classify with 100\% accuracy. Nevertheless, the features Merlin uses for class $-1$ are completely uncorrelated with the class label. To exploit this, however, Morgana would have to solve the $\SNP$-hard (see {% cite kleinberg2006algorithm --file formal_interpretability %}) subset sum problem to find the pixels for images in class 1 that sum to $S$. The question is not in which class we can find the features, but in which class we can find the features *efficiently*.
+{:.figcap}
+<br>
 
 
 ### Key Result
 
-With the above two notions of Relative Strength and Asymmetric Feature Correlation in mind, we can provide a key theoretical result of this paper.
+With the notions of Relative Strength and Asymmetric Feature Correlation in mind, we can provide a key theoretical result.
 
 **Main Theorem:** Let $D$ be two-class data space with AFC of $\kappa$ and class imbalance $B$. Let $A\in \CA$, and $M, \widehat{M}\in\CM(D)$ such that $\widehat{M}$ has a relative success rate of $\alpha$ with respect to $A, M$ and $D$.
 Define
@@ -80,16 +87,12 @@ This result shows that we can bound the performance of the feature selector Merl
 
 ### Key Takeaways
 The above theoretical discussion shows two key contributions of our framework.
-1. We do not assume our agents to be optimal. In the presented theorem Merlin is allowed to have any arbitrary strategy.
-We rather rely on the relative strength of Merlin and Morgana for our bound. We also allow our provers to
-select the features with the context of the full data point.
+1. We do not assume our agents to be optimal, but rather that Morgana has a comparable success rate to Merlin. This seems reasonable when we use the same algorithms for both and deal with real-world datasets.
 
-1. We do not make the assumption that features are independently distributed. Instead, we introduce the notion
-of Asymmetric Feature Correlation (AFC) that captures which correlations make an information bound
-difficult.
+1. We can use the relative strength and the AFC to derive a lower bound on the precision of the features that are selected by Merlin.
 
-
-
+<a href="/blog/2023/FI_AFC/">&#9664; Previous Post</a>
+<p align="right"><a href="/blog/2023/FI_Complexity/" align="right"> Next Post &#9654;</a></p>
 
 ### References
 
