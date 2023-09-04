@@ -28,10 +28,9 @@ Here is one snapshot from our creative process:
 
 **Current Progress:**
 
-- 3/14ish songs are written
+- 7/14ish songs are written
 - Character design is complete
-- Overall 2-act plot structure is done
-- Dialogues still need to be written in detail
+- Overall 2-act plot structure + 1/3 of all dialogue
 - Instrumentalisation to be settled (probably piano, guitar, base, drums, violin, one brass instrument)
 
 **Want to contribute?**
