@@ -28,6 +28,7 @@ Here is one snapshot from our creative process:
 
 **Current Progress:**
 
+- 4 Songs recorded
 - 7/14ish songs are written
 - Character design is complete
 - Overall 2-act plot structure + 1/3 of all dialogue
