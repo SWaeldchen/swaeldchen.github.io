@@ -16,7 +16,7 @@ The **core skills** that make me an employee of exceptional ability are:
 
 ## Illustrative Projects:
 
-### Proved a novel Tensor Network Convergence Theorem:###
+#### Proved a novel Tensor Network Convergence Theorem:
 
 My master project was in quantum information theory, and I proved a convergence theorem for a class of tensor network renormalisation schemes.I was especially proud that it happened after my Professor and my Postdoc supervisor had given up on the problem. Solving it involved coming up with a new eigenvector perturbation bound for quantum channels via Perron-Frobenius theory, a field where I had no prior experience in. When I felt like some technique could work, but I lacked the necessary in-depth knowledge, I would contact experts in the field, schedule a meeting with them and asked them questions until I was able to understand the topic well enough to make use of it.
 Reverse-engineered a car security protocol (in 4 months): In 2017, I worked in a car sharing company that developed an interface to remotely open and start the car. My task was to reverse engineer a common (VW) cryptographic scheme that the RFID chip of the car key used. I was able to extract the secret key, which allowed us to emulate the protocol on our own hardware for a wide range of cars in circulation. This involved:
