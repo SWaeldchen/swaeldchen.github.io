@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <s>We are looking for a new PhD student in AI Interpretability</s>
+title: <s>We are looking for a new PhD student in AI Interpretability</s> (filled!)
 date: 2023-04-01 16:11:00-0400
 inline: false
 related_posts: false
