@@ -123,6 +123,24 @@ und mein Ich vermisst sein Du,<br>
 Dann zwinkern wir uns aus Äonen<br>
 durch den Äther heimlich zu.<br>
 
+
+**Der Träumer**<br>
+Die besten meiner Freunde sind lang nicht mehr am Leben<br>
+Die liebsten meiner Brüder sind heut noch nicht geboren<br>
+die Wälder meiner Jugend, die hat es nie gegeben<br>
+In meinen schönsten Stunden, da war ich ganz verloren<br>
+
+Meiner größten Liebe, der bin ich nie begegnet<br>
+der treuste meiner Jünger, der hat mich nie gehört<br>
+Die Schlösser meiner Kindheit war'n alle eingeebnet<br>
+Und meine einz'ge Heimat lag ewig schon zerstört<br>
+
+Meine tiefsten Fragen, die kann ich dir nicht nennen<br>
+Und meine kühnsten Taten, die wurden nie vollbracht<br>
+Mein wahrstes Ich im Innern, das lernte niemand kennen<br>
+Aus meinen süß'sten Träumen bin ich nie aufgewacht<br>
+
+
 <br/><br/>
 ## English
 <br/><br/>
