@@ -3,12 +3,9 @@ layout: page
 permalink: /swt/
 title: Exceptional Skills
 nav: false
-nav_order: 7
 description: Examples of Exceptional Skils
 horizontal: false
 ---
-
-
 
 
 
