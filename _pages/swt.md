@@ -32,5 +32,11 @@ My master project was in quantum information theory, and I proved a convergence 
 - acquiring access to an older car with a weaker key length,
 - turning a large truth table into a small Boolean function in algebraic normal form.
 I was a fresh beginner in all of these tasks and was able to break the encryption within a 4 months time frame. I worked completely independently, but had help with the soldering equipment.
-Musical translations: My biggest hobby is musical theatre, and I like translating musical numbers into German. This is a surprisingly intricate and complex optimisation task, as you have to fit meaning, rhythm, rhyming and vocalisation together, which often requires out-of-the-box thinking to make the song sound genuine and not just translated. One of the musicals I translated, I also performed with friends. I am also currently writing my own musical about a startup that creates a rogue AI, more infos on my website.
-Logical Puzzles: I love solving and designing and logical puzzles. I participated in multiple puzzle hunts (2x Amazon Internal Puzzle hunt, was invited by friends who work there, 1x MUMS puzzle hunt, countless times informal ones with friends). Four time in the last 10 years, I designed or co-designed puzzle hunts or murder mystery games that I then played with my friends or colleagues.
+
+#### Musical translations
+
+My biggest hobby is musical theatre, and I like translating musical numbers into German. This is a surprisingly intricate and complex optimisation task, as you have to fit meaning, rhythm, rhyming and vocalisation together, which often requires out-of-the-box thinking to make the song sound genuine and not just translated. One of the musicals I translated, I also performed with friends. I am also currently writing my own musical about a startup that creates a rogue AI, more infos on my website.
+
+#### Puzzle hunts
+
+I love solving and designing and logical puzzles. I participated in multiple puzzle hunts (2x Amazon Internal Puzzle hunt, was invited by friends who work there, 1x MUMS puzzle hunt, countless times informal ones with friends). Four time in the last 10 years, I designed or co-designed puzzle hunts or murder mystery games that I then played with my friends or colleagues.
