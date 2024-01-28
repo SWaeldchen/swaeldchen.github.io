@@ -1,15 +1,15 @@
 ---
 layout: page
-permalink: /swt/
+permalink: /record/
 title: Exceptional Skills
 nav: false
-description: Examples of Exceptional Skils
+description: An overview of examplary projects of my performance as employee
 horizontal: false
 ---
 
 The **core skills** that make me an employee of exceptional ability are:
 - high problem-solving ability,
-- quick adaption to new knowledge,
+- quick adaption to new environments,
 - strong ownership of projects/high agency,
 - creative, out-of-the box thinking,
 - extroverted, empathic personality, good communicator.
@@ -20,7 +20,7 @@ Here are some example projects that illustarte the aforementioned skills.
 
 #### Proved a novel Tensor Network Convergence Theorem
 
-My master project was in quantum information theory, and I proved a convergence theorem for a class of tensor network renormalisation schemes.I was especially proud that it happened after my Professor and my Postdoc supervisor had given up on the problem. Solving it involved coming up with a new eigenvector perturbation bound for quantum channels via Perron-Frobenius theory, a field where I had no prior experience in. When I felt like some technique could work, but I lacked the necessary in-depth knowledge, I would contact experts in the field, schedule a meeting with them and asked them questions until I was able to understand the topic well enough to make use of it.
+In 2015, I finished my Master in Physics. For my thesis in quantum information theory, I proved a convergence theorem for a class of tensor network renormalisation schemes. This implies that entanglement distillation schemes are successful even for realistic error conditions. I was especially proud that it happened after my Professor and my Postdoc supervisor had given up on the problem. Solving it involved coming up with a new eigenvector perturbation bound for quantum channels via Perron-Frobenius theory, a field where I had no prior experience in. When I felt like some technique could work, but I lacked the necessary in-depth knowledge, I would contact experts in the field, schedule a meeting with them and asked them questions until I was able to understand the topic well enough to make use of it.
 
 #### Reverse-engineered a car security protocol (in 4 months)
 
@@ -32,6 +32,18 @@ My master project was in quantum information theory, and I proved a convergence 
 - acquiring access to an older car with a weaker key length,
 - turning a large truth table into a small Boolean function in algebraic normal form.
 I was a fresh beginner in all of these tasks and was able to break the encryption within a 4 months time frame. I worked completely independently, but had help with the soldering equipment.
+
+#### Finishing my Math published
+
+in 2022, i finished
+
+
+#### Presentations and Outreach
+
+Throughout my studies, I worked as an educator at the university for . I gave talks at conferences including ICML, AISTATS, XAI World, Sampta and DPG. I was furthermore invited to talk in seminaries of AIMS (Capetown), GAMM, Mathematics of Deep Learning. In 2020, I performed in the TU Science Slam as part of the Long Night of Science.
+
+I have on numerous occasions received the feedback that I give highly engaging talks that manage to present complex topics in an intuitive and understandable way. Fitting my presentation to the target audience,
+
 
 #### Musical translations
 
