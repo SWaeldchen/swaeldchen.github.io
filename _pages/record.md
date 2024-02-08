@@ -39,6 +39,15 @@ Doing a master in theoretical physics prepares you only partially for succeeding
 I was especially proud of coming up with my own research agenda and developing novel proof techniques in fields that were new to me, often binge-watching university lectures about obscure topics late at night. Over the course of my PhD, while working at Charité, Technical University Berlin or the Zuse Institute, I supervised 7 bachelor, master and PhD students and help them succeed as well.
 
 #### Presentations and Outreach
+
 Throughout my studies, I worked as an educator at the university for . I gave talks at conferences including ICML, AISTATS, XAI World, Sampta and DPG. I was furthermore invited to talk in seminaries of AIMS (Capetown), GAMM, Mathematics of Deep Learning. In 2020, I performed in the TU Science Slam as part of the Long Night of Science.
 
 I have on numerous occasions received the feedback that I give highly engaging talks that manage to present complex topics in an intuitive and understandable way. Fitting my presentation to the target audience,
+
+#### Musical translations
+
+My biggest hobby is musical theatre, and I like translating musical numbers into German. This is a surprisingly intricate and complex optimisation task, as you have to fit meaning, rhythm, rhyming and vocalisation together, which often requires out-of-the-box thinking to make the song sound genuine and not just translated. One of the musicals I translated, I also performed with friends. I am also currently writing my own musical about a startup that creates a rogue AI, more infos on my website.
+
+#### Puzzle hunts
+
+I love solving and designing and logical puzzles. I participated in multiple puzzle hunts (2x Amazon Internal Puzzle hunt, was invited by friends who work there, 1x MUMS puzzle hunt, countless times informal ones with friends). Four time in the last 10 years, I designed or co-designed puzzle hunts or murder mystery games that I then played with my friends or colleagues.
