@@ -18,9 +18,10 @@ The **core skills** that make me an employee of exceptional ability are:
 
 Here are some example projects that illustarte the aforementioned skills.
 
-#### Proved a novel Tensor Network Convergence Theorem
+#### PhD in Mathematics
 
-My master project was in quantum information theory, and I proved a convergence theorem for a class of tensor network renormalisation schemes.I was especially proud that it happened after my Professor and my Postdoc supervisor had given up on the problem. Solving it involved coming up with a new eigenvector perturbation bound for quantum channels via Perron-Frobenius theory, a field where I had no prior experience in. When I felt like some technique could work, but I lacked the necessary in-depth knowledge, I would contact experts in the field, schedule a meeting with them and asked them questions until I was able to understand the topic well enough to make use of it. The project resultet in a publication in Physical Review Letters, one of the most eminent physics journals.
+Doing a master in theoretical physics prepares you only partially for succeeding at writing abstract math papers. Math proofs are much more formal in their description and reasoning. But my colleagues and I fromed a grat team and largely supervised and supported each other. We have published papers in widely varying areas of computational complexity theory, probability theory, theory of metric spaces and applied machine learning at top journal and conferences such as Nature, ICML and AISTATS.
+I was especially proud of coming up with my own research agenda and developing novel proof techniques in fields that were new to me, often binge-watching university lectures about obscure topics late at night. Over the course of my PhD, while working at Charité, Technical University Berlin or the Zuse Institute, I supervised 7 bachelor, master and PhD students and help them succeed as well.
 
 #### Reverse-engineered a car security protocol
 
@@ -33,10 +34,10 @@ My master project was in quantum information theory, and I proved a convergence 
 - turning a large truth table into a small Boolean function in algebraic normal form.
 I was a fresh beginner in all of these tasks and was able to break the encryption **within a 4 months time frame**. I worked completely independently, but had help with the soldering equipment.
 
-#### Finished PhD in Mathematics
 
-Doing a master in theoretical physics prepares you only partially for succeeding at writing abstract math papers. Math proofs are much more formal in their description and reasoning. But my colleagues and I fromed a grat team and largely supervised and supported each other. We have published papers in widely varying areas of computational complexity theory, probability theory, theory of metric spaces and applied machine learning at top journal and conferences such as Nature, ICML and AISTATS.
-I was especially proud of coming up with my own research agenda and developing novel proof techniques in fields that were new to me, often binge-watching university lectures about obscure topics late at night. Over the course of my PhD, while working at Charité, Technical University Berlin or the Zuse Institute, I supervised 7 bachelor, master and PhD students and help them succeed as well.
+#### Proved a novel Tensor Network Convergence Theorem
+
+My master project was in quantum information theory, and I proved a convergence theorem for a class of tensor network renormalisation schemes.I was especially proud that it happened after my Professor and my Postdoc supervisor had given up on the problem. Solving it involved coming up with a new eigenvector perturbation bound for quantum channels via Perron-Frobenius theory, a field where I had no prior experience in. When I felt like some technique could work, but I lacked the necessary in-depth knowledge, I would contact experts in the field, schedule a meeting with them and asked them questions until I was able to understand the topic well enough to make use of it. The project resultet in a publication in Physical Review Letters, one of the most eminent physics journals.
 
 #### Presentations and Outreach
 
