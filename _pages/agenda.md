@@ -9,11 +9,10 @@ horizontal: false
 
 {% include abbrv.html %}
 
-This is the current form of my research agenda. It will be implemented depending on my next position. Please feel free to get into contact if you are interested in similar topics.
+This is the current form of my research agenda. It will be implemented depending on my next position. Please feel free to get into contact if you are interested in similar topics.  The aim is to make generative artificial intelligences safe, understandable, and controllable.
 
 ## Overview:
 
-This is an overview over my current research agenda. The aim is to make generative artificial intelligences safe, understandable, and controllable.
 
 1. [**Optimisation Routines for Adversarial Prompting:**](#optimisation) Build a sophisticated optimisation routine to find prompts that elicit certain behaviour (e.g., giving out sensitive information). These routines serve for model testing as well as to enforce adversarial robustness during training.
 2. [**Faithful Chain of Thought:**](#cot) Can we make LLMs that "think step-by-step" or conversational reasoning between different LLMs faithful to the "true" reasoning process? Models have been shown to convey demonstrably false reasoning processes. Can this be prevented?
@@ -99,9 +98,9 @@ This is instrumentally important to delete sensitive data, correct false beliefs
 
 ### Outline
 
-Sparse autoencoders can be used to incentivise monosemanticity {% cite cunningham2023sparse --file agenda %}.
+On the theory side, the question of how concepts are encoded in a resource-efficient way should be investigated further, similar to {% cite scherlis2022polysemanticity --file agenda %}. On the practical side, it has been demonstrated that sparse autoencoders can be used to incentivise monosemanticity {% cite cunningham2023sparse --file agenda %}. Additionally, using dictionary learning can be used to disentangle an overcomplete features vector basis {% cite bricken2023towards --file agenda %}. So far, existing approaches are not fully able to enforce monosemanticity. Can the training paradigm be improved further?
 
-
+On a different note, Intermediate Layer Decoding, see [this](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) and [this](https://www.lesswrong.com/posts/fJE6tscjGRPnK8C2C/decoding-intermediate-activations-in-llama-2-7b) forum discussion, is useful to track the reasoning process of the transformer through the attention layers. This technique can be used to speed up the inference {% cite varshney2023accelerating --file agenda %}. It should be investigated if decoding the intermediate layers reveals capabilities for planning and intentional reasoning inside the LLM.
 
 
 {% bibliography --cited --file agenda.bib --template bib2 %}
